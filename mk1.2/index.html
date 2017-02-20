@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content='text/html;charset=utf-8' http-equiv='Content-Type'>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"87e900fa1e","applicationID":"30144493","transactionName":"c1cPRhZWXF5SSxgSX1FKCFwDFlFCRw==","queueTime":0,"applicationTime":69,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[(new Date).getTime()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(s,function(e,t){f[t]=o(l+t,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),t.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(p+"tracer",[Date.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return t.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){d[t]=o(p+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,(new Date).getTime()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o){if(!p.aborted){e&&e(n,r,o);for(var i=t(o),a=v(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var f=s[w[n]];return f&&f.push([y,n,r,i]),i}}function d(e,t){b[e]=v(e).concat(t)}function v(e){return b[e]||[]}function g(e){return l[e]=l[e]||o(n)}function m(e,t){f(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var b={},w={},y={on:d,emit:n,get:g,listeners:v,context:t,buffer:m,abort:a,aborted:!1};return y}function i(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},l={},p=t.exports=o();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!h++){var e=y.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return f.abort();c(b,function(t,n){e[t]||(e[t]=n)}),u("mark",["onload",a()],null,"api");var n=l.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===l.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=e("handle"),c=e(2),f=e("ee"),s=window,l=s.document,p="addEventListener",d="attachEvent",v=s.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:v,REQ:s.Request,EV:s.Event,PR:s.Promise,MO:s.MutationObserver},e(1);var m=""+location,b={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1016.min.js"},w=v&&g&&g[p]&&!/CriOS/.test(navigator.userAgent),y=t.exports={offset:a(),origin:m,features:{},xhrWrappable:w};l[p]?(l[p]("DOMContentLoaded",i,!1),s[p]("load",r,!1)):(l[d]("onreadystatechange",o),s[d]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+<meta content='width=device-width, initial-scale=1, maximum-scale=1' name='viewport'>
+<meta content='yes' name='apple-mobile-web-app-capable'>
+<meta content='yes' name='mobile-web-app-capable'>
+<meta content='black-translucent' name='apple-mobile-web-app-status-bar-style'>
+<meta content='webkit' name='renderer'>
+<meta content='app-id=1050565468' name='apple-itunes-app'>
+<title>
+MK1.2
+</title>
+<link href='images/icon_android.png' rel='icon' sizes='192x192'>
+<link href='images/icon_retina.png' rel='apple-touch-icon' sizes='120x120'>
+<link href='images/icon_retina3x.png' rel='apple-touch-icon' sizes='180x180'>
+<link href='images/icon_ipad.png' rel='apple-touch-icon' sizes='144x144'>
+<link href='images/icon_ipad.png' rel='apple-touch-icon' sizes='152x152'>
+<link href='images/splashes/retina.png' media='(device-width: 320px) and (device-height: 568px)' rel='apple-touch-startup-image'>
+<link href='images/splashes/iphone4_portrait_retina.png' media='(device-width: 320px) and (device-height: 480px)' rel='apple-touch-startup-image'>
+<link href='images/splashes/iphone6_portrait_retina.png' media='(device-width: 375px) and (device-height: 667px)' rel='apple-touch-startup-image'>
+<link href='images/splashes/iphone6plus_portrait_retina.png' media='(device-width: 414px) and (device-height: 736px)' rel='apple-touch-startup-image'>
+<link href='images/splashes/ipad_portrait_retina.png' media='(device-width: 768px) and (device-height: 1024px) and (orientation:portrait)' rel='apple-touch-startup-image'>
+<link href='images/splashes/ipad_landscape_retina.png' media='(device-width: 768px) and (device-height: 1024px) and (orientation:landscape)' rel='apple-touch-startup-image'>
+<style>
+  html, body {
+    color: #333333;
+    font-family: -apple-system, "SF UI Text", "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Zen Hei", sans-serif;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 18px;
+    overflow: hidden;
+    height: 100%; }
+  
+  body {
+    background: #efefef;
+    color: #333333; }
+    body.mobile {
+      background-color: white; }
+  
+  #download, .modal.fade, #header {
+    display: none; }
+  
+  #notification {
+    position: fixed;
+    top: -70px;
+    left: 0; }
+  
+  .notice {
+    padding: 10px;
+    font-size: 14px; }
+    .notice p {
+      margin-bottom: 10px; }
+  
+  .spinner {
+    width: 30px;
+    height: 30px;
+    border-width: 3px;
+    border-style: solid;
+    border-color: rgba(51, 54, 58, 0.6) transparent;
+    border-radius: 100%;
+    transform-origin: 50% 50% 0px;
+    -webkit-animation: mb-spin 0.8s infinite linear;
+    animation: mb-spin 0.8s infinite linear;
+    display: inline-block; }
+  
+  @-webkit-keyframes mb-spin {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg); }
+  
+    100% {
+      -webkit-transform: rotate(359deg);
+      transform: rotate(359deg); } }
+  
+  @keyframes mb-spin {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg); }
+  
+    100% {
+      -webkit-transform: rotate(359deg);
+      transform: rotate(359deg); } }
+  
+  .actions {
+    visibility: hidden; }
+  
+  #safemode, #nonsupport, #logo, #install, .cover, #device {
+    display: none; }
+  
+  #fontawesome {
+    position: absolute;
+    top: -65535px;
+    left: -65535px; }
+    #fontawesome .aw {
+      position: absolute;
+      width: auto;
+      white-space: nowrap; }
+    #fontawesome .ah {
+      position: absolute;
+      height: auto;
+      word-break: break-word;
+      word-wrap: break-word; }
+      #fontawesome .ah p {
+        margin-bottom: 5px;
+        white-space: pre-wrap; }
+        #fontawesome .ah p:last-child {
+          margin-bottom: 0px; }
+  
+  #loading {
+    width: 86px;
+    height: 86px;
+    z-index: 2;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    margin-left: -43px;
+    text-align: center;
+    font-size: 12px; }
+    #loading .logo, #loading .indicator {
+      position: absolute;
+      top: -3px;
+      left: -3px;
+      width: 86px;
+      height: 86px;
+      overflow: hidden;
+      background: url("images/logo-lg.svg");
+      background-size: 86px 86px; }
+    #loading .logo {
+      opacity: 0.3; }
+    #loading .indicator {
+      opacity: 1;
+      -webkit-transition: all 0.5s ease-in-out;
+      -moz-transition: all 0.5s ease-in-out;
+      transition: all 0.5s ease-in-out;
+      height: 0%; }
+    #loading span {
+      position: absolute;
+      width: 300px;
+      left: 50%;
+      top: 110px;
+      margin-left: -150px;
+      font-size: 14px;
+      line-height: 28px;
+      color: #f77d77; }
+</style>
+
+<style>
+  #splash {
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #f0f0f2; }
+    #splash img {
+      position: absolute;
+      top: 0px;
+      left: 0;
+      width: 100%;
+      height: 100%; }
+    #splash img.landscape {
+      display: none; }
+    #splash .spinner {
+      position: absolute;
+      top: 48%;
+      left: 50%;
+      margin-left: -15px; }
+  
+  @media all and (orientation: landscape) {
+    #splash img {
+      position: absolute;
+      left: 0;
+      -webkit-transform: rotate(90deg);
+      -webkit-transform-origin: bottom left; }
+  
+    #splash .spinner {
+      position: absolute;
+      top: 50%;
+      margin-top: -16px; } }
+</style>
+
+
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="n5Lz7KbYYEBXygqP6amGJGoiXjw0z15m0ZtSpdmKrgkri+1piIkfhrEKEsApp5dJD1Wa9+ozY+NgIjvIs7e+yg==" />
+</head>
+<body>
+<div id='fontawesome'>
+<i class='fa fa-user'></i>
+<div class='aw'></div>
+<div class='ah'></div>
+</div>
+<div id='loading'>
+<div class='logo'></div>
+<div class='indicator'></div>
+<span>
+loading MK1.2...
+</span>
+</div>
+<div data-user='null' id='workspace'>
+<div id='install'>
+<div class='app-inner'>
+<img class='app-icon' src='images/icon_android.png'>
+<h1 class='app-name'>
+MK1.2
+</h1>
+<div class='app-update-time'>
+<span>
+Last updated
+:
+</span>
+<abbr class='timeago' title='2017-01-24T06:07:30Z'></abbr>
+</div>
+<a class='install-btn' href='/app/mCtMJzM6Q50JLs1OverbVE5Vv7RMNam?inapp=1'>
+View App
+</a>
+<a class='install install-btn'>
+Install
+</a>
+<a class='download' href='https://itunes.apple.com/cn/app/mockingbot/id1050565468?ls=1&amp;mt=8' id='ios-download'>
+Get MockingBot Player on App Store
+</a>
+</div>
+</div>
+<div class='cover wechat'>
+<div class='tip-wrapper'>
+<p class='tip'>
+Open in broswer.
+</p>
+<img class='arrow' src='images/short-arrow.png'>
+</div>
+</div>
+<div class='cover ipad'>
+<div class='tip-wrapper'>
+<p class='tip'>
+Tap
+<img src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAA1BAMAAADfUYSoAAAAFVBMVEUAAAAGfv8Eff8Xh/8Ae/cAgfcDev8kxpS2AAAABnRSTlMAgGPrExbGXyRsAAAAYUlEQVQ4y+3MsQ2AMBADQMMEofk6VSZgEyZ4Cu8/Ai+QXgpOmTJuYp2cR+aAZGMRM7rOKENzmss1/i/aDaJ5P6thO0s/C0OLJ3PV1/YTfZhtuvFLlOxjk7/LphmWTTPJ0B64+0mEocrEDQAAAABJRU5ErkJggg==' width='19'>
+,
+then Choose &quot;Add to Home Screen&quot;
+</p>
+<img class='arrow' src='images/short-arrow.png'>
+</div>
+</div>
+<div class='cover iphone'>
+<div class='tip-wrapper iphone'>
+<p class='tip'>
+Tap
+<img src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAA1BAMAAADfUYSoAAAAFVBMVEUAAAAGfv8Eff8Xh/8Ae/cAgfcDev8kxpS2AAAABnRSTlMAgGPrExbGXyRsAAAAYUlEQVQ4y+3MsQ2AMBADQMMEofk6VSZgEyZ4Cu8/Ai+QXgpOmTJuYp2cR+aAZGMRM7rOKENzmss1/i/aDaJ5P6thO0s/C0OLJ3PV1/YTfZhtuvFLlOxjk7/LphmWTTPJ0B64+0mEocrEDQAAAABJRU5ErkJggg==' width='19'>
+,
+then Choose &quot;Add to Home Screen&quot;
+</p>
+<img class='arrow' src='images/down-arrow.png'>
+</div>
+</div>
+<div class='cover building'>
+<div class='tip-wrapper'>
+<p class='tip'>
+Building your APK...
+</p>
+<div class='spinner'></div>
+</div>
+</div>
+</div>
+<div class='safe-mask' id='safemode'>
+<div class='indicator restore'>
+<div class='spinner'></div>
+<div class='text'>
+This may take several minutes, have a cup of tea...
+<span class='progress'>0%</span>
+</div>
+</div>
+<div class='indicator success'>
+<span class='icon'>
+<i class='fa fa-smile-o'></i>
+</span>
+<div class='text'>
+All data saved successfully, please refresh this page to continue. <a onclick="window.location.reload()"> Refresh Now</a>
+</div>
+</div>
+</div>
+<div class='modal fade modal-small' id='safe-modal'>
+<div class='modal-dialog'>
+<div class='modal-content'>
+<div class='modal-body'>
+<img alt='' src='data:image/svg+xml;base64,Cjxzdmcgd2lkdGg9IjY0cHgiIGhlaWdodD0iNjRweCIgdmlld0JveD0iMTY4IDAgNjQgNjQiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDQwLjMgKDMzODM5KSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4KICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPgogICAgPGRlZnM+PC9kZWZzPgogICAgPGcgaWQ9ImljX2Vycm9yX291dGxpbmUiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE2OC4wMDAwMDAsIDAuMDAwMDAwKSI+CiAgICAgICAgPGcgaWQ9Ikljb24tMjRweCI+CiAgICAgICAgICAgIDxwb2x5Z29uIGlkPSJTaGFwZSIgcG9pbnRzPSIwIDAgNjQgMCA2NCA2NCAwIDY0Ij48L3BvbHlnb24+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik0yOS4zMzMzMzMzLDQwIEwzNC42NjY2NjY3LDQwIEwzNC42NjY2NjY3LDQ1LjMzMzMzMzMgTDI5LjMzMzMzMzMsNDUuMzMzMzMzMyBMMjkuMzMzMzMzMyw0MCBaIE0yOS4zMzMzMzMzLDE4LjY2NjY2NjcgTDM0LjY2NjY2NjcsMTguNjY2NjY2NyBMMzQuNjY2NjY2NywzNC42NjY2NjY3IEwyOS4zMzMzMzMzLDM0LjY2NjY2NjcgTDI5LjMzMzMzMzMsMTguNjY2NjY2NyBaIE0zMS45NzMzMzMzLDUuMzMzMzMzMzMgQzE3LjI1MzMzMzMsNS4zMzMzMzMzMyA1LjMzMzMzMzMzLDE3LjI4IDUuMzMzMzMzMzMsMzIgQzUuMzMzMzMzMzMsNDYuNzIgMTcuMjUzMzMzMyw1OC42NjY2NjY3IDMxLjk3MzMzMzMsNTguNjY2NjY2NyBDNDYuNzIsNTguNjY2NjY2NyA1OC42NjY2NjY3LDQ2LjcyIDU4LjY2NjY2NjcsMzIgQzU4LjY2NjY2NjcsMTcuMjggNDYuNzIsNS4zMzMzMzMzMyAzMS45NzMzMzMzLDUuMzMzMzMzMzMgTDMxLjk3MzMzMzMsNS4zMzMzMzMzMyBaIE0zMiw1My4zMzMzMzMzIEMyMC4yMTMzMzMzLDUzLjMzMzMzMzMgMTAuNjY2NjY2Nyw0My43ODY2NjY3IDEwLjY2NjY2NjcsMzIgQzEwLjY2NjY2NjcsMjAuMjEzMzMzMyAyMC4yMTMzMzMzLDEwLjY2NjY2NjcgMzIsMTAuNjY2NjY2NyBDNDMuNzg2NjY2NywxMC42NjY2NjY3IDUzLjMzMzMzMzMsMjAuMjEzMzMzMyA1My4zMzMzMzMzLDMyIEM1My4zMzMzMzMzLDQzLjc4NjY2NjcgNDMuNzg2NjY2Nyw1My4zMzMzMzMzIDMyLDUzLjMzMzMzMzMgTDMyLDUzLjMzMzMzMzMgWiIgaWQ9IlNoYXBlIiBmaWxsPSIjRjc1QjUwIj48L3BhdGg+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4='>
+<h5>Oops!</h5>
+<p id='alert-msg'></p>
+<button class='btn btn-primary' onclick='window.location.reload()'>Reload</button>
+</div>
+</div>
+</div>
+</div>
+
+<div class='notice' id='nonsupport'>
+<p>
+We're sorry but we havn't support your browser yet, please <a href='/downloads'>download our Desktop version</a>.
+</p>
+</div>
+
+<div id='modals'>
+<div class='modal fade' id='warning-modal'></div>
+<div class='modal fade' id='sharing-modal'></div>
+<div class='modal fade' id='renew_modal'>
+<div class='modal-dialog'>
+<div class='modal-content'>
+<div class='modal-header'>
+<a class='close' data-dismiss='modal' href='#'>×</a>
+<h4>Renew required</h4>
+</div>
+<div class='modal-body'>
+<p class='limit collaboration'>
+This is a collaborated project, you need to ask project owner renew his/her account to continue editing. If you own this project, you can remove all collaborators to continue.
+</p>
+<p class='limit exporting comments'>
+This a paid feature, and you need renew your account before continuing. You may need contact the project owner if you aren't the owner of this project.
+</p>
+<p class='limit exceed_quota'>
+You have exceeded image storage limit (100M) of free plan, and your free trial has expired. You need upgrade your account to continue.
+</p>
+</div>
+<div class='modal-footer'>
+<a class='btn btn-primary' href='/account'>
+Renew Now
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class='modal fade' id='chrome-warning'>
+<div class='modal-dialog'>
+<div class='modal-content'>
+<div class='modal-header'>
+<button aria-label='Close' class='close' data-dismiss='modal' type='button'>
+<span aria-hidden='true'>
+&times
+</span>
+</button>
+<h4 class='modal-title'>
+<i class='fa fa-warning'></i>
+<span class="translation_missing" title="translation missing: en.warning">Warning</span>
+</h4>
+</div>
+<div class='modal-body'>
+<p>
+We've detected that your browser has restricted the minimum font size that can be displayed, so you may need change this setting to make text copies display correctly.
+</p>
+<p>
+<a href='https://modao.cc/posts/63' target='blank'>
+Click here to read instructions.
+</a>
+</p>
+</div>
+<div class='modal-footer'>
+<button class='btn btn-default' data-dismiss='modal' type='button'>
+Got it
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class='modal fade' id='cheating-warning'>
+<div class='modal-dialog'>
+<div class='modal-content'>
+<div class='modal-body'>
+<p>
+<b>任何要求微信转账，汇款，购买授权码的行为都是诈骗行为</b>。
+</p>
+<p>
+墨刀官方唯一购买渠道： <a href="https://modao.cc">modao.cc</a>，其它都是诈骗，损失墨刀概不负责。
+</p>
+<p class='tips'>
+付费用户可去除此提示。
+</p>
+</div>
+<div class='modal-footer'>
+<a aria-hidden='true' data-dismiss='modal' href='#'>
+知道了，我不会转账
+</a>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+
+<script>
+  (function() {
+    var splash;
+  
+    window.MBLocale = 'en';
+  
+    window.I18N = {
+      "new_app": "Create App",
+      "preview_demo": "View Demo",
+      "create": "Create",
+      "setting": "Settings",
+      "update": "Update",
+      "are_you_sure": "Are you sure?",
+      "screen_remove_confirmation": " has \u003cb\u003e{children} sub-screen(s)\u003c/b\u003e, this screen and all its sub-screens will be removed permanently, are you sure?",
+      "cant_remove_screen": "You need at least 1 screen.",
+      "last_updated": "Last updated",
+      "support": "Support",
+      "carrier": "AT\u0026T",
+      "remove_parent_only": "No, Remove Parent Only",
+      "remove_all": "Yes, Remove Parent and All Subs",
+      "w": {
+        "label": "Label",
+        "text_view": "Text",
+        "pg": "Gesture",
+        "lr": "Link Region",
+        "icon_button": "Icon",
+        "image_view": "Image",
+        "button": "Button",
+        "webpage": "Webpage",
+        "mtooltip": "Tooltip",
+        "rounded_rect": "Rectangle",
+        "circle_rect": "Circle",
+        "hr": "Horizon Line",
+        "ve": "Vertical Line",
+        "triangleb": "Triangle 1",
+        "triangletl": "Triangle 2",
+        "navigation_bar": "Nav Bar",
+        "search_bar": "Search Bar",
+        "tab_bar": "Tab Bar",
+        "tab_item": "Tab Item",
+        "rectangle": "List Item",
+        "switch": "Switch",
+        "map_view": "Map",
+        "keyboard": "Keyboard",
+        "sticky": "Sticky",
+        "status_bar": "Status Bar",
+        "panel": "Panel",
+        "group": "Group",
+        "text_view_placeholder": "If you can't explain it simply you don't understand it well enough.\n -- Albert Einstein",
+        "navbar_title": "Title",
+        "search": "Search",
+        "mcheckbox2": "Checkbox",
+        "mradiobutton": "Radio Button",
+        "mtext_input": "Text Input",
+        "mtextarea": "Text Area",
+        "mselect": "Droplist",
+        "mfile_input": "File Input"
+      },
+      "drag_to_link_screen": "drag circle to link screens",
+      "password": "Password",
+      "screen": "Screen",
+      "home": "Home",
+      "pay_with_alipay": "translation missing: en.pay_with_alipay",
+      "share": "Share",
+      "rotate": "Rotate",
+      "launch": "Launch",
+      "new_screen": "New Screen",
+      "back": "Back",
+      "return": "return",
+      "login_from_desktop": "To create new app you need log into MockingBot with a desktop browser.",
+      "install": "Install",
+      "tap": "Tap",
+      "public": "Public",
+      "private": "Encrypted",
+      "add_to_home_screen": "then Choose \"Add to Home Screen\"",
+      "open_in_broswer": "translation missing: en.open_in_broswer",
+      "dup_app_confirmation": "This app will be duplicated are you sure?",
+      "data_lost_warning": "Data is still being sent to the server; Your changes will be lost if you close this page, are you sure to quit?",
+      "recover_warning": "Recovery will lead to refresh the page, please save the content unmodified, sure you want to recover?",
+      "inspector": {
+        "width": "Width",
+        "height": "Height",
+        "font_size": "Font Size",
+        "line_height": "Line Height",
+        "bs": "Border Width",
+        "ls": "Border Style",
+        "radius": "Border Radius",
+        "p": "Zoom Proportional",
+        "icon": "Icon",
+        "is": "Icon Size",
+        "search": "search icon, e.g. user",
+        "drop_image": "Drop image here or",
+        "click_to_upload": "click to upload.",
+        "asset_search": "Search Image",
+        "circularize": "Circle",
+        "squareize": "Square",
+        "ro": "Rotate Degree",
+        "input_type": "Keyboard",
+        "z": "Layer",
+        "o": "Opacity",
+        "ds": "Drop Shadow",
+        "sc": "Shadow Color",
+        "ts": "Text Shadow",
+        "tsc": "Shadow Color",
+        "bg": "Background",
+        "tc": "Foreground",
+        "bc": "Border Color",
+        "f": "Font",
+        "padding": "Padding",
+        "checked": "Checked",
+        "numeric": "Numeric Keyboard",
+        "fixed": "Fixed Position",
+        "fixed_auto": "Auto detect relative",
+        "fixed_top": "Relative to Top",
+        "fixed_bottom": "Relative to Bottom",
+        "visible": "(V)isible in this state.",
+        "placement": "Placement",
+        "offset": "Triangle Offset",
+        "arrow_size": "Triangle Size",
+        "blur": "blur",
+        "grayscale": "grayscale",
+        "sepia": "sepia",
+        "brightness": "brightness",
+        "contrast": "contrast",
+        "hue_rotate": "hue rotate",
+        "invert": "invert",
+        "saturate": "saturate",
+        "reset": "reset"
+      },
+      "drag_to_create_screen": "Drag image files here to create new screen(s).",
+      "regenerate": "Re-generate",
+      "recover": "Recover",
+      "got_it": "Got it",
+      "no_deleted_screens": "There is no screen deleted",
+      "screen_transh_can": "Screen Trash Can",
+      "network_error": "Failed to contact server please check network setting.",
+      "save": "Save",
+      "unsupported": "Unsupported file type.",
+      "link_back": "Prev Screen",
+      "save_tip": "Save(Ctrl-s)",
+      "drag_to_start": "Drag component or image file here to start",
+      "home_screen": "Home Screen",
+      "signup_required": "You need sign up at first before using this feature.",
+      "copy_tip": "Copy",
+      "credential_required": "This app is protected please input your credential:",
+      "state": "State",
+      "new": "New",
+      "widgets": "Widgets(1)",
+      "templates": "Templates(2)",
+      "combos": "Combos(3)",
+      "new_combo": "New Combo",
+      "invalid_credential": "Invalid credential refresh to try again.",
+      "icons": {
+        "all": "All",
+        "basics": "Basic",
+        "brand": "Brand",
+        "text": "Text",
+        "directional": "Directional",
+        "form": "Form",
+        "video": "Video"
+      },
+      "app_device": "Device Type",
+      "app_type": "App Type",
+      "icon": "Icon",
+      "splash": "Splash",
+      "size": "Size",
+      "icon_and_splash": "Icon And Splash",
+      "tr": {
+        "none": "None",
+        "slideleft": "R Slide",
+        "slideright": "L Slide",
+        "slidebottom": "B Slide",
+        "slidetop": "T Slide",
+        "leftmenu": "L Menu",
+        "rightmenu": "R Menu",
+        "leftdrawer": "L Drawer",
+        "rightdrawer": "R Drawer",
+        "slideleft2": "L Push",
+        "slideright2": "R Push",
+        "popin": "B Push",
+        "topin": "T Push",
+        "leftout": "L Pop",
+        "rightout": "R Pop",
+        "popout": "B Pop",
+        "topout": "T Pop"
+      },
+      "target": "Target",
+      "png_only": "Please upload PNG file for Icon/Splash.",
+      "all_apps": "My Active Apps",
+      "inbox": "Move into Active",
+      "sharing": "Sharing",
+      "owner_only": "Only owner or admin can invite new member.",
+      "sharing_url": "Sharing URL",
+      "toolbox": {
+        "ruler": "Size(R)",
+        "text": "Text(T)",
+        "icons": "Icons(I)",
+        "palette": "Color(O)",
+        "uploader": "Image Uploader(U)",
+        "states": "Choose a state to create link"
+      },
+      "last_saved": "Last saved",
+      "link_line": "Show/Hide Links",
+      "archive": "Move to Archive",
+      "download": "Download",
+      "archived": "My Archives",
+      "del_app_confirmation": "This app will be deleted are you sure?",
+      "wait_for_saving": "This screen hasn't been saved yet, please wait a moment and try again.",
+      "fix_data": "We've detected you have unsaved changes do you want to save them now?",
+      "undo": "Undo(Ctrl-z)",
+      "redo": "Redo(Ctrl-y)",
+      "cut": "Cut(Ctrl-x)",
+      "copy": "Copy(Ctrl-c)",
+      "paste": "Paste(Ctrl-v)",
+      "upload_image": "Upload Image",
+      "site_title": "MockingBot",
+      "send_front": "Send front",
+      "send_back": "Send back",
+      "forward": "Forward",
+      "backward": "Backward",
+      "wechat": "Wechat",
+      "choose_screen": "Choose screen to Nav",
+      "hdistribute": "Distribute horizontally",
+      "vdistribute": "Distribute vertically",
+      "group": "Group(Ctrl-g)",
+      "ungroup": "Ungroup(Ctrl-u)",
+      "hright": "Right Alignment",
+      "make_a_copy": "Make a Copy",
+      "more_options": "More Options",
+      "unsaved": "unsaved",
+      "all_saved": "done",
+      "timer": "Timer",
+      "no_timer": "Not set",
+      "cant_delete_template": "Can't delete this template you need delete all instances of this template at first.",
+      "archive_confirmation": "This app will be archived are you sure?",
+      "unarchive_confirmation": "This app will be moved to home are you sure?",
+      "dc_confirm": "This screen has sub-screens, do you like to duplicate all sub-screens?",
+      "grid": "Show/Hide Grid",
+      "ruler": "Show/Hide Ruler",
+      "lock": "Lock/Unlock Widget",
+      "hleft": "Left Alignment",
+      "hcenter": "Horizon Center",
+      "vtop": "Top Alignment",
+      "vbottom": "Bottom Alignment",
+      "vcenter": "Vertical Center",
+      "zoomin": "Zoom In",
+      "zoomout": "Zoom Out",
+      "delete": "Delete",
+      "expand_screen": "Expand Screen",
+      "shrink_screen": "Shrink Screen",
+      "watch_tutorial": "Watch Tutorial",
+      "edit": "Edit",
+      "builtin_theme": "Built-in Style",
+      "custom_theme": "Custom Style",
+      "screen_bgcolor": "Set Background Color",
+      "screen_bgimage": "Set Background Image",
+      "pg_tooltip": "Global Gesture",
+      "lr_tooltip": "Drag the mouse can hold down Ctrl/Cmd to quickly create links area",
+      "icon_tooltip": "Icon",
+      "sticky_tooltip": "Sticky is visible outside of screen.",
+      "menu_offset": "Menu(%)",
+      "edit_demo": "Edit Demo App",
+      "create_new": "Create A New App",
+      "blank_app": "Blank App",
+      "template_app": "Template Apps",
+      "basic": "Basic",
+      "shapes": "Shapes",
+      "bars": "Bars",
+      "others": "Others",
+      "webpage": "Webpage",
+      "drag_to_resize": "Drag to Resize",
+      "https_only": "Double click to edit URL (https only).",
+      "template_search": "Search Template",
+      "no_archived_app": "You don't have any archived app.",
+      "archive_app": "Visit the site on a computer to archive apps",
+      "no_app": "You don't have any app",
+      "visit_via_computer": "Visit the site on a computer",
+      "view_demo": "Check this demo",
+      "sharing_password": "Password (Optional)",
+      "edit_screens": "Edit Screens",
+      "state_link_tutorial": "Template Link Tutorial",
+      "highlight_clickable": "Hightlight link areas on screen clicking.",
+      "type2search": "Search ",
+      "all_assets": "All Images",
+      "current_assets": "Current Project",
+      "text_color": "Text Color",
+      "search_doc": "Search Doc",
+      "combo_search": "Search Combos",
+      "all_combos": "All Combos",
+      "my_combos": "My Combos",
+      "builtin": "Built-in",
+      "width": "Width",
+      "height": "Height",
+      "sticky": "Sticky",
+      "new_template": "New Template",
+      "auto_scale": "Auto Scale",
+      "auto_scale_tip": "Auto scale to fill different screens e.g combo for iPhone 5s will scale 1.17x to fit iPhone 6 and 1.29x for iPhone 6 plus.",
+      "drag_widgets_2create": "Drag widgets to create a combo",
+      "upgrade_prompt": "New version has fixed file downloading bug visit mockingbot.com with browser to download.",
+      "embed": "Embed",
+      "submit_app_proposal": "Need more templates? \u003ca href=\"#page/forum/feature_request\"\u003eLell us know.\u003c/a\u003e",
+      "shell_type": "Shell Type",
+      "device_shell": "Real Device",
+      "default_shell": "Default Gray Shell",
+      "none_shell": "None Shell",
+      "upload_own": "Upload your own",
+      "upload_icon": "Upload Icon",
+      "upload_splash": "Upload Splash",
+      "app_name": "Name",
+      "free_trial": "Free trial check pricing.",
+      "restricted": "White list",
+      "public_intro": "Visible to everyone free forever.",
+      "private_intro": "Anyone who know URL and password.",
+      "restricted_intro": "Only collaborators in team or project.",
+      "expired": "Expired",
+      "manage_collaborators": "Manage Team Members",
+      "roles": {
+        "admin": "Administrator",
+        "admin_desc": "Admin",
+        "editor": "Designer",
+        "editor_desc": "Edit",
+        "viewer": "Reviewer",
+        "viewer_desc": "View",
+        "owner": "Owner"
+      },
+      "invite": "Invite",
+      "pending": "Pending",
+      "others_apps": "'s Apps",
+      "remove_me": "Leave",
+      "invalid_post": "Either content or an app is required",
+      "cant_invite_self": "Can't invite yourself",
+      "left": "left",
+      "right": "right",
+      "top": "top",
+      "down": "down",
+      "dip_help": "What's device independent width and height?",
+      "dblclick_to_edit": "Double Click to Edit",
+      "name_copy": " Copy",
+      "load_project": "Loading project please wait a moment...",
+      "connect_to_push_server": "Connecting to push server...",
+      "reconnect_push_server": "Failed to contact push server reconnecting...",
+      "invalid_email": "Invalid Email",
+      "cant_invite_yourself": "Can't invite yourself",
+      "already_invited": "Already invited",
+      "exceed_collaborator_limit": "Exceed collaborator limitation of your plan upgrading needed.",
+      "in_progress": "This may take several minutes, have a cup of tea...",
+      "screen_list": "Screen List",
+      "text_mode": "Text Mode",
+      "link_mode": "Link Mode",
+      "order_period": "Choose Period",
+      "current_plan": "Current plan",
+      "next_billing_on": "Next billing on",
+      "balance_left": "translation missing: en.balance_left",
+      "enterprise": "Enterprise",
+      "actually_pay": "translation missing: en.actually_pay",
+      "monthly": "Monthly",
+      "yearly": "Yearly",
+      "pro": "Pro",
+      "free": "Free",
+      "standard": "Standard",
+      "startup": "Startup",
+      "invalid_comment": "Comment can't be blank",
+      "electron_download_alert": "Have trouble downloading it? Please try downloading it from browser.",
+      "no_permission": "Sorry you don't have permission to edit this template.",
+      "widget_list": "Widget List",
+      "team_name": "Team Name",
+      "edit_team": "Edit Team",
+      "team_icon": "Team Icon",
+      "team_color": "Team Color",
+      "icon_and_color": "Icon And Color",
+      "team": "team",
+      "role": "Role",
+      "projects_count": "Projects",
+      "screens_count": "Screens",
+      "members_count": "Members",
+      "choose_team": "Choose Team",
+      "no_joined_team": "You didn't join any team.",
+      "my_assets": "My Images",
+      "import_app": "Import App",
+      "choose_app": "Choose an app",
+      "dup_and_import": "Duplicate this app and import copy",
+      "no_privilege": "You don't have enough privilege for this operation.",
+      "delete_projects_first": "Please delete all project in this team at first.",
+      "refresh_token_confirmation": "This will re-generate sharing url of your app are you sure?",
+      "main_state": "Main State",
+      "ani_name": "Animation",
+      "ani_delay": "Delay",
+      "ani_duration": "Duration",
+      "ani_count": "Iteration",
+      "animate": "Animate",
+      "none": "None",
+      "default": "Default",
+      "infinite": "Infinite",
+      "ani": {
+        "attention_seekers": "Attention Seekers",
+        "bouncing_entrances": "Bouncing Entrances",
+        "flippers": "Flippers",
+        "rotating_entrances": "Rotating Entrances",
+        "sliding_entrances": "Sliding Entrances",
+        "zoom_entrances": "Zoom Entrances",
+        "specials": "Specials",
+        "bounce": "bounce",
+        "fadeIn": "fadeIn",
+        "flash": "flash",
+        "pulse": "pulse",
+        "rubberBand": "rubberBand",
+        "shake": "shake",
+        "swing": "swing",
+        "tada": "tada",
+        "wobble": "wobble",
+        "jello": "jello",
+        "bounceIn": "bounceIn",
+        "bounceInDown": "bounceInDown",
+        "bounceInLeft": "bounceInLeft",
+        "bounceInRight": "bounceInRight",
+        "bounceInUp": "bounceInUp",
+        "flipInX": "flipInX",
+        "flipInY": "flipInY",
+        "spinning": "spinning(clockwise)",
+        "spinning-reverse": "spinning(counter clockwise)",
+        "rotateIn": "rotateIn",
+        "rotateInDownLeft": "rotateInDownLeft",
+        "rotateInDownRight": "rotateInDownRight",
+        "rotateInUpLeft": "rotateInUpLeft",
+        "rotateInUpRight": "rotateInUpRight",
+        "slideInDown": "slideInDown",
+        "slideInLeft": "slideInLeft",
+        "slideInRight": "slideInRight",
+        "slideInUp": "slideInUp",
+        "zoomIn": "zoomIn",
+        "zoomInDown": "zoomInDown",
+        "zoomInLeft": "zoomInLeft",
+        "zoomInRight": "zoomInRight",
+        "zoomInUp": "zoomInUp",
+        "rollIn": "rollIn",
+        "lightSpeedIn": "lightSpeedIn"
+      },
+      "storage": "Image Storage",
+      "whats_this": "What's this?",
+      "exceed_screen_limit": "This project has more than 50K components and states, and you can't add more screen/state to this project for loading and running performance consideration. You can create a new project to continue.",
+      "new_state": "New State",
+      "tutorial": "Tutorial",
+      "reset_target_screen": "Reset target screen to initial state",
+      "android.customize": "Customize",
+      "unsaved_changes": "You have unsaved changes, please make sure all your changes are saved and then try again.",
+      "transfer_screen": "Transfer screen to other project",
+      "transfer": "Transfer",
+      "minputs": "Inputs",
+      "move": "Move",
+      "global_state": "Global State",
+      "global_state_link_error": "You can't create state link in global state.",
+      "input_types": {
+        "text": "Text",
+        "number": "Number",
+        "search": "Search",
+        "password": "Password",
+        "date": "Date",
+        "time": "Time",
+        "datetime": "Datetime"
+      },
+      "move_tips": "Create a copy and move the copy to dst team.",
+      "g": {
+        "tap": "Tap",
+        "left": "Swipe Left",
+        "right": "Swipe Right",
+        "up": "Swipe Up",
+        "down": "Swipe Down",
+        "hold": "Tap and Hold",
+        "dtap": "Double Tap",
+        "shake": "Shake",
+        "timer": "Timer",
+        "vscroll": "Vertical Scroll"
+      },
+      "choose_move_dst": "Move to",
+      "assets_manager": "Open Assets Manager(A)",
+      "tags": "Tags",
+      "tags_placeholder": "Select an image to add tag.",
+      "name": "Name",
+      "choose_tag": "Choose a Tag",
+      "create_tag": "New Tag",
+      "insert_to_current": "Insert to Screen",
+      "create_new_screen": "Create a new Screen",
+      "my_apps": "My Apps",
+      "team_apps": "My Teams",
+      "remove_clip": "Remove Clip Path",
+      "update_colorset": "Update Style",
+      "colorset_tips": "Tips: use Shift-NUM to apply style, click to add/update.",
+      "new_colorset": "Add Style",
+      "replace_image": "Replace Image",
+      "cancel": "Cancel",
+      "duplicate_all": "Yes, Duplicate All Subs",
+      "duplicate_parent_only": "No, Duplicate Parent Only",
+      "coupon": "Coupon",
+      "new_flow": "New Flow",
+      "flow": "Flow",
+      "untitled_flow": "Untitled Flow",
+      "ipa_building_starts": "Start building your iOS app. We will sent you an e-mail when finished.",
+      "ipa_device.not_configured": "No installable device available, please ask your team administrator to add your device first.",
+      "no_ios_certificate": "No Apple iOS distribution certicifate available.",
+      "go_to_account_settings": "Go to Settings",
+      "ios_offline": "iOS IPA",
+      "import": "Import",
+      "import_template": "Import Template",
+      "choose_template_to_import": "Choose template to import",
+      "full_view": "Full View",
+      "edit_workflows": "Edit Workflows",
+      "view_app": "View App",
+      "view_workflows": "View Workflow",
+      "expand_all": "Expand All",
+      "fold_all": "translation missing: en.fold_all",
+      "apply_coupon": "Apply",
+      "notifications": {
+        "all": "Notifications",
+        "view_all": "View All",
+        "load_more": "Load more",
+        "request_permission": "Please allow us to send you notifications for better experience",
+        "mark_all_as_read": "Mark All as Read",
+        "empty": "No Notifications"
+      },
+      "loading": "loading",
+      "untitled_editable": "Untitled - Double-Click to Edit",
+      "got_message": "Got a message",
+      "buy": "Buy",
+      "no_post": "There is no post here",
+      "click2create": "create one",
+      "login_to_vote": "Login to vote.",
+      "preview": {
+        "comment": {
+          "switch": "Comment Mode",
+          "tip": "Double-click to add new Comment",
+          "tip_signin": "Sign-in to add new Comment",
+          "tip_not_collaborator": "Please contact project owner for a collaborator invitation to add your comment",
+          "panel": " Comment",
+          "thread_create": "Add",
+          "thread_delete_confirm": "Remove this comment forever?",
+          "thread_none": "No Comment",
+          "thread_none_tip": "Double click on the left, or use the button below to add comment",
+          "thread_none_tip_signin": "Sign-in to add comment",
+          "comment_placeholder": "Use Shift + Enter for new line",
+          "comment_create": "Reply",
+          "comment_create_initial": "Create",
+          "comment_create_initial_title": "Create Comment",
+          "comment_delete_confirm": "Remove this reply forever?",
+          "modify_edit": "Edit",
+          "modify_delete": "Delete",
+          "reply": " Reply",
+          "reply_none": "no reply",
+          "reply_none_tip": "Please add your message below to create comment",
+          "reply_new": " new",
+          "reply_new_thread": "New",
+          "divider_new": "New Reply",
+          "show_all_0": "Show ",
+          "show_all_1": " more",
+          "tag_edited": "Edited",
+          "unfold": "Unfold"
+        },
+        "screen": {
+          "panel": "Screen Panel"
+        }
+      },
+      "web_signin": "Sign in",
+      "switch_to_free": "Your account will be auto downgraded to FREE plan once it's expired.",
+      "other_settings": "Other Settings",
+      "new_post": "New Post",
+      "choose_category": "Change Category",
+      "project": "project",
+      "acl_moved_to_sharing": "Access setting was moved to sharing panel.",
+      "who_can_access": "Who can access the sharing",
+      "unknown_error": "We're sorry but something went wrong, we've been notified and will fix it ASAP. Please reload this page to continue.",
+      "new_version_detected": "New version detected, please refresh to continue.",
+      "no_team": "You don't have any team.",
+      "no_team_app": "This team don't have any app",
+      "create_app_tips": "You can click here to create one.",
+      "create_team_tips": "Click here to create one",
+      "new_team": "Create Team",
+      "client_download": "MacOS and Windows client to download",
+      "tutorial_video": "MockingBot tutorials \u0026 videos",
+      "created_time": "Created At Asc",
+      "updated_time": "Updated At Desc",
+      "all_teams": "All teams",
+      "created_teams": "My teams",
+      "joined_teams": "Joined teams",
+      "team_intro": "Learn more about teams.",
+      "liked": "Liked",
+      "karma": "Karma",
+      "edit_profile": "Edit Profile",
+      "public_projects": "Public Apps",
+      "my_posts": "My Posts",
+      "his_posts": "His/Her Posts",
+      "my_comments": "My Comments",
+      "his_comments": "His/Her Comments",
+      "sharing_app": "Share App",
+      "embed_app": "Embed Code",
+      "permission": "Permission",
+      "access_permission": "Access",
+      "preview_settings": "Preview Settings",
+      "embed_tips": "Embed in a website or blog by copying the code below.",
+      "view_in_browser": "Check this if you'd like play app directly without the installation instructions.",
+      "account": {
+        "pay_success": "Pay for success",
+        "reload_after_countdown": "Will refresh automatically after \u003cspan style=\"color: #F55D54\"\u003e\u003c/span\u003e s",
+        "switch_plan": "Switch",
+        "renew": "Renew",
+        "pay_with_paypal": "Paypal",
+        "pay_with_alipay": "Alipay",
+        "pay_with_wechat": "Wechat",
+        "scan_with_wechat": "Pay with WeChat QR",
+        "provided_by_pingxx": "This service is provided by the Ping ++",
+        "reload": "Reload Now",
+        "balance_left": "Balance Left",
+        "actually_pay": "Pay Due",
+        "save_17": "Save 17%",
+        "new_plan": "New Plan",
+        "new_billing_date": "New Billing Date",
+        "payment_methods": "Payment Methods",
+        "wechat_pay": "WeChat Pay",
+        "confirm_pay": "Comfirm",
+        "pay": "Pay",
+        "discount": "Current Discount"
+      }
+    };
+  
+    splash = document.getElementById('splashimg');
+  
+    if (splash && window.innerWidth > window.innerHeight) {
+      splash.style.width = window.innerHeight + 'px';
+      splash.style.height = window.innerWidth + 'px';
+      splash.style.top = (0 - window.innerWidth) + 'px';
+    }
+  
+  }).call(this);
+</script>
+<link href='css/font-awesome.min.css' media='screen' rel='stylesheet'>
+<link href='css/roboto.css' media='screen' rel='stylesheet'>
+
+<link rel="stylesheet" media="screen" href="assets/sharing-5630f6ac2236762408fbae74c4986157.css" />
+<link rel="stylesheet" media="screen" href="webpack/preview-8e0b82d0a72fb26d479827e1b8949875.css" />
+<script>
+  document.getElementsByClassName("indicator")[0].style.height = '30%';
+  var MBServer = "mockingbot.com";
+</script>
+<script src="assets/sharing-fc6bee75b056ec1649969a919a2e5302.js"></script>
+<script src="webpack/preview-8867d69ca1ccafb75ce3.js"></script>
+<script>
+  (function() {
+    MB.play = function() {
+      return MB.load('mCtMJzM6Q50JLs1OverbVE5Vv7RMNam', false, '');
+    };
+  
+    $(function() {
+      if (!window.navigator.standalone && !false && MB.isMobile() && !MB.isLocal()) {
+        MB.initWechat(null);
+        return MB.initInstall();
+      } else if (MB.isPhantom()) {
+        return $("body").addClass('phantom');
+      } else {
+        return MB.play();
+      }
+    });
+  
+  }).call(this);
+</script>
+
+</body>
+</html>
+<script>window.MBData=
+{"templates":[],"project":{"owner_id":32145,"owner_plan":"startup","owner_name":"Lesego","owner_email":"alex@rapidtrade.biz","owner_avatar":"/images/avatar.png","limitation":5,"screens_count":6,"cid":"pCEC5C360531479903904197","team_cid":null,"name":"MK1.2","updated_at":"2017-01-24T06:07:30Z","created_at":"2016-11-23T12:25:20Z","access":"private","access_token":"mCtMJzM6Q50JLs1OverbVE5Vv7RMNam","version":"v2","icon":"/images/icon_retina.png","splash":null,"width":350,"height":610,"device":"android","model":"customize","scale":75,"archived":false,"template":false,"timestamp":"1485238050","combo":false,"behavior":"inherit","master":false,"builtin":false,"auto_scale":false,"parent_cid":null,"host_cid":null,"clones":0,"shell_type":"device","password":"","wechat":false,"highlight":true,"expired":false,"slack_web_hook_url":null,"validated":true},"screens":[{"cid":"s335BD175111479903920225","project_cid":"pCEC5C360531479903904197","parent_cid":null,"expanded":true,"name":"App","orientation":"portrait","position":2,"width":350,"height":640,"hh":null,"fh":null,"bgcolor":"#F0F0F2","bgimage":null,"deleter_name":null,"deleted_at":null,"artboard_id":null,"artboard_asset_id":null},{"cid":"s28E19752C51479903920246","project_cid":"pCEC5C360531479903904197","parent_cid":null,"expanded":true,"name":"Home","orientation":"portrait","position":1,"width":350,"height":640,"hh":19,"fh":22,"bgcolor":"#dbd7db","bgimage":"","deleter_name":null,"deleted_at":null,"artboard_id":null,"artboard_asset_id":null},{"cid":"sBBC26AA2621479920905427","project_cid":"pCEC5C360531479903904197","parent_cid":"s335BD175111479903920225","expanded":false,"name":"User","orientation":"portrait","position":1,"width":350,"height":640,"hh":23,"fh":39,"bgcolor":"#F0F0F2","bgimage":null,"deleter_name":null,"deleted_at":null,"artboard_id":null,"artboard_asset_id":null},{"cid":"s176607D4021479922156329","project_cid":"pCEC5C360531479903904197","parent_cid":"s335BD175111479903920225","expanded":false,"name":"Truck","orientation":"portrait","position":2,"width":350,"height":640,"hh":null,"fh":19,"bgcolor":"#F0F0F2","bgimage":null,"deleter_name":null,"deleted_at":null,"artboard_id":null,"artboard_asset_id":null},{"cid":"s3B634DDB9C1479922410148","project_cid":"pCEC5C360531479903904197","parent_cid":"s335BD175111479903920225","expanded":false,"name":"Camera","orientation":"portrait","position":3,"width":350,"height":640,"hh":null,"fh":21,"bgcolor":"#F0F0F2","bgimage":null,"deleter_name":null,"deleted_at":null,"artboard_id":null,"artboard_asset_id":null},{"cid":"sC891EA8FC31479922858930","project_cid":"pCEC5C360531479903904197","parent_cid":"s335BD175111479903920225","expanded":false,"name":"Calender","orientation":"portrait","position":4,"width":350,"height":640,"hh":null,"fh":null,"bgcolor":"#F0F0F2","bgimage":null,"deleter_name":null,"deleted_at":null,"artboard_id":null,"artboard_asset_id":null}],"widgets":[{"cid":"wB0A192FF471479919835566","screen_cid":"s335BD175111479903920225","timestamp":20965456,"v":true,"name":"icon_button","left":-4.0,"top":344.333333333333,"width":184.0,"height":216.0,"gid":"l2C8D57DD451479922517548","locked":false,"is":120,"icon":"camera","br":0,"bs":0,"z":5,"th":"","bg":"","bc":"","tc":"","o":100,"ds":0,"sc":"#222222","ro":0,"ls":0,"fixed":false,"fixed_type":1,"ani_name":"none","ani_delay":"0","ani_count":"1","ani_duration":"0"},{"cid":"w6CD26B6B791479919902341","screen_cid":"s335BD175111479903920225","timestamp":20965468,"v":true,"name":"icon_button","left":180.0,"top":346.0,"width":180.0,"height":190.0,"gid":"l3E0962C8881485237633926","locked":false,"is":120,"icon":"calendar","br":0,"bs":0,"z":5,"th":"","bg":"","bc":"","tc":"","o":100,"ds":0,"sc":"#222222","ro":0,"ls":0,"fixed":false,"fixed_type":1,"ani_name":"none","ani_delay":"0","ani_count":"1","ani_duration":"0"},{"cid":"wE727E3ABD91479919986164","screen_cid":"s335BD175111479903920225","timestamp":20965477,"v":true,"name":"icon_button","left":180.0,"top":67.6666666666667,"width":180.0,"height":204.0,"gid":"l0503E62D811479922343815","locked":false,"is":120,"icon":"truck","br":0,"bs":0,"z":5,"th":"","bg":"","bc":"","tc":"","o":100,"ds":0,"sc":"#222222","ro":0,"ls":0,"fixed":false,"fixed_type":1,"ani_name":"none","ani_delay":"0","ani_count":"1","ani_duration":"0"},{"cid":"w9F5846C0CD1479920248390","screen_cid":"s335BD175111479903920225","timestamp":20965498,"v":true,"name":"icon_button","left":20.0,"top":23.0,"width":45.0,"height":45.0,"gid":"lC82A81118E1479921744601","locked":false,"is":46,"icon":"home","br":0,"bs":0,"z":5,"th":"","bg":"","bc":"","tc":"","o":100,"ds":0,"sc":"#222222","ro":0,"ls":0,"fixed":false,"fixed_type":1,"ani_name":"none","ani_delay":"0","ani_count":"1","ani_duration":"0"},{"cid":"w68CC1B44441479920382973","screen_cid":"s335BD175111479903920225","timestamp":20965506,"v":true,"name":"icon_button","left":-4.0,"top":64.6666666666667,"width":184.0,"height":205.333333333333,"gid":"l6350BFDA7F1479921887390","locked":false,"is":124,"icon":"user","br":0,"bs":0,"z":5,"th":"","bg":"","bc":"","tc":"","o":100,"ds":0,"sc":"#222222","ro":0,"ls":0,"fixed":false,"fixed_type":1,"ani_name":"none","ani_delay":"0","ani_count":"1","ani_duration":"0"},{"cid":"w89D83436051479951458705","screen_cid":"s335BD175111479903920225","timestamp":20966129,"v":true,"name":"mtext_input","left":44.0,"top":234.0,"width":89.3333333333333,"height":36.0,"gid":null,"locked":false,"text":"User","fs":20,"br":8,"bs":1,"ha":"center","z":5,"th":"","bg":"transparent","bc":"transparent","tc":"","o":100,"ds":0,"sc":"#222222","td":"normal","bo":1,"i":0,"ls":0,"fixed":false,"fixed_type":1,"input_type":"text"},{"cid":"w9A94816F981479951499263","screen_cid":"s335BD175111479903920225","timestamp":20966139,"v":true,"name":"mtext_input","left":230.0,"top":234.0,"width":89.3333333333333,"height":36.0,"gid":null,"locked":false,"text":"Vehicle","fs":20,"br":8,"bs":1,"ha":"center","z":5,"th":"","bg":"transparent","bc":"transparent","tc":"","o":100,"ds":0,"sc":"#222222","td":"normal","bo":1,"i":0,"ls":0,"fixed":false,"fixed_type":1,"input_type":"text"},{"cid":"wC895F2EC261479951519303","screen_cid":"s335BD175111479903920225","timestamp":20966146,"v":true,"name":"mtext_input","left":44.0,"top":524.666666666667,"width":96.0,"height":36.0,"gid":null,"locked":false,"text":"Camera ","fs":20,"br":8,"bs":1,"ha":"center","z":5,"th":"","bg":"transparent","bc":"transparent","tc":"","o":100,"ds":0,"sc":"#222222","td":"normal","bo":1,"i":0,"ls":0,"fixed":false,"fixed_type":1,"input_type":"text"},{"cid":"w60A69E97CB1479951569395","screen_cid":"s335BD175111479903920225","timestamp":20966163,"v":true,"name":"mtext_input","left":220.333333333333,"top":524.666666666667,"width":109.333333333333,"height":35.3333333333333,"gid":null,"locked":false,"text":"Calender","fs":20,"br":8,"bs":1,"ha":"center","z":5,"th":"","bg":"transparent","bc":"transparent","tc":"","o":100,"ds":0,"sc":"#222222","td":"normal","bo":1,"i":0,"ls":0,"fixed":false,"fixed_type":1,"input_type":"text"},{"cid":"w6312F193B11479919009159","screen_cid":"s28E19752C51479903920246","timestamp":20965331,"v":true,"name":"icon_button","left":100.0,"top":165.0,"width":160.0,"height":135.0,"gid":"lAA0B0724511479921913502","locked":false,"is":88,"icon":"car","br":0,"bs":0,"z":5,"th":"","bg":"","bc":"","tc":"","o":100,"ds":0,"sc":"#222222","ro":0,"ls":0,"fixed":false,"fixed_type":1,"ani_name":"none","ani_delay":"0","ani_count":"1","ani_duration":"0"},{"cid":"w67BB9FAA481479919377509","screen_cid":"s28E19752C51479903920246","timestamp":20965386,"v":true,"name":"icon_button","left":70.0,"top":310.0,"width":220.0,"height":140.0,"gid":null,"locked":false,"is":24,"icon":"caret-up","br":0,"bs":0,"z":5,"th":"","bg":"","bc":"","tc":"","o":100,"ds":0,"sc":"#222222","ro":0,"ls":0,"fixed":false,"fixed_type":1,"ani_name":"none","ani_delay":"0","ani_count":"1","ani_duration":"0"},{"cid":"w1DE2543FF11479919377883","screen_cid":"s28E19752C51479903920246","timestamp":20965390,"v":true,"name":"icon_button","left":100.0,"top":289.666666666667,"width":160.0,"height":132.0,"gid":null,"locked":false,"is":24,"icon":"caret-up","br":0,"bs":0,"z":5,"th":"","bg":"","bc":"","tc":"","o":100,"ds":0,"sc":"#222222","ro":0,"ls":0,"fixed":false,"fixed_type":1,"ani_name":"none","ani_delay":"0","ani_count":"1","ani_duration":"0"},{"cid":"wFC2C4FB7751479919406629","screen_cid":"s28E19752C51479903920246","timestamp":20965397,"v":true,"name":"icon_button","left":70.0,"top":244.0,"width":220.0,"height":176.0,"gid":null,"locked":false,"is":24,"icon":"caret-up","br":0,"bs":0,"z":5,"th":"","bg":"","bc":"","tc":"","o":100,"ds":0,"sc":"#222222","ro":0,"ls":0,"fixed":false,"fixed_type":1,"ani_name":"bounce","ani_delay":"0","ani_count":"infinite","ani_duration":"2s"},{"cid":"wD5FF4FD7071479919477087","screen_cid":"s28E19752C51479903920246","timestamp":20965409,"v":true,"name":"text_view","left":135.0,"top":409.333333333333,"width":90.6666666666667,"height":30.6666666666667,"gid":null,"locked":false,"text":"<p>Press To Open</p>","fs":13,"br":0,"bs":0,"ha":"left","va":"top","z":5,"th":"dark","lh":18,"td":"normal","bo":0,"i":0,"bg":"","bc":"","tc":"#555","o":100,"ts":0,"tsc":"#aaaaaa","ds":0,"sc":"#222222","ro":0,"padding":0,"ls":0,"fixed":false,"fixed_type":1,"ani_name":"flash","ani_delay":"6s","ani_count":"1","ani_duration":"5s","clip":null},{"cid":"w5BFF95CC951479920924203","screen_cid":"sBBC26AA2621479920905427","timestamp":20965537,"v":true,"name":"icon_button","left":20.0,"top":39.6666666666667,"width":80.0,"height":55.3333333333333,"gid":null,"locked":false,"is":60,"icon":"user","br":0,"bs":0,"z":5,"th":"","bg":"","bc":"","tc":"","o":100,"ds":0,"sc":"#222222","ro":0,"ls":0,"fixed":false,"fixed_type":1,"ani_name":"none","ani_delay":"0","ani_count":"1","ani_duration":"0"},{"cid":"w2B3F732CFC1479921940079","screen_cid":"sBBC26AA2621479920905427","timestamp":20965633,"v":true,"name":"icon_button","left":30.0,"top":540.0,"width":45.0,"height":45.0,"gid":"l595CDB19C31479922095638","locked":false,"is":24,"icon":"chevron-circle-left","br":0,"bs":0,"z":5,"th":"","bg":"","bc":"","tc":"","o":100,"ds":0,"sc":"#222222","ro":0,"ls":0,"fixed":false,"fixed_type":1,"ani_name":"none","ani_delay":"0","ani_count":"1","ani_duration":"0"},{"cid":"w14872947741479922005388","screen_cid":"sBBC26AA2621479920905427","timestamp":20965637,"v":true,"name":"icon_button","left":276.0,"top":540.0,"width":45.0,"height":45.0,"gid":null,"locked":false,"is":24,"icon":"chevron-circle-right","br":0,"bs":0,"z":5,"th":"","bg":"","bc":"","tc":"","o":100,"ds":0,"sc":"#222222","ro":0,"ls":0,"fixed":false,"fixed_type":1,"ani_name":"none","ani_delay":"0","ani_count":"1","ani_duration":"0"},{"cid":"wAD9E4AC9E71479951707218","screen_cid":"sBBC26AA2621479920905427","timestamp":20966175,"v":true,"name":"mtext_input","left":80.3333333333333,"top":39.0,"width":217.333333333333,"height":30.6666666666667,"gid":null,"locked":false,"text":"User Details","fs":23,"br":8,"bs":1,"ha":"center","z":5,"th":"","bg":"transparent","bc":"transparent","tc":"","o":100,"ds":0,"sc":"#222222","td":"normal","bo":1,"i":0,"ls":0,"fixed":false,"fixed_type":1,"input_type":"text"},{"cid":"wC011C01AAC1479922195415","screen_cid":"s176607D4021479922156329","timestamp":20965650,"v":true,"name":"icon_button","left":20.0,"top":40.0,"width":70.3333333333333,"height":45.3333333333333,"gid":null,"locked":false,"is":60,"icon":"truck","br":0,"bs":0,"z":5,"th":"","bg":"","bc":"","tc":"","o":100,"ds":0,"sc":"#222222","ro":0,"ls":0,"fixed":false,"fixed_type":1,"ani_name":"none","ani_delay":"0","ani_count":"1","ani_duration":"0"},{"cid":"w96C80099791479922225145","screen_cid":"s176607D4021479922156329","timestamp":20965654,"v":true,"name":"icon_button","left":30.0,"top":564.0,"width":45.0,"height":45.0,"gid":"l58A67B112A1479922282950","locked":false,"is":24,"icon":"chevron-circle-left","br":0,"bs":0,"z":5,"th":"","bg":"","bc":"","tc":"","o":100,"ds":0,"sc":"#222222","ro":0,"ls":0,"fixed":false,"fixed_type":1,"ani_name":"none","ani_delay":"0","ani_count":"1","ani_duration":"0"},{"cid":"w3043755F031479922244992","screen_cid":"s176607D4021479922156329","timestamp":20965659,"v":true,"name":"icon_button","left":285.0,"top":564.0,"width":45.0,"height":45.0,"gid":null,"locked":false,"is":24,"icon":"chevron-circle-right","br":0,"bs":0,"z":5,"th":"","bg":"","bc":"","tc":"","o":100,"ds":0,"sc":"#222222","ro":0,"ls":0,"fixed":false,"fixed_type":1,"ani_name":"none","ani_delay":"0","ani_count":"1","ani_duration":"0"},{"cid":"wD75B05D14D1479950579497","screen_cid":"s176607D4021479922156329","timestamp":20966036,"v":true,"name":"mtext_input","left":90.3333333333333,"top":40.0,"width":217.333333333333,"height":30.6666666666667,"gid":null,"locked":false,"text":"Vehicle Inspection","fs":23,"br":8,"bs":1,"ha":"center","z":5,"th":"","bg":"transparent","bc":"transparent","tc":"","o":100,"ds":0,"sc":"#222222","td":"normal","bo":1,"i":0,"ls":0,"fixed":false,"fixed_type":1,"input_type":"text"},{"cid":"w4B21BE63781479950743849","screen_cid":"s176607D4021479922156329","timestamp":20966047,"v":true,"name":"icon_button","left":20.0,"top":195.0,"width":45.0,"height":45.0,"gid":null,"locked":false,"is":100,"icon":"asterisk","br":0,"bs":0,"z":5,"th":"","bg":"","bc":"","tc":"","o":100,"ds":0,"sc":"#222222","ro":0,"ls":0,"fixed":false,"fixed_type":1,"ani_name":"none","ani_delay":"0","ani_count":"1","ani_duration":"0"},{"cid":"w95C0B396F91479950876776","screen_cid":"s176607D4021479922156329","timestamp":20966061,"v":true,"name":"mtext_input","left":20.0,"top":270.0,"width":90.0,"height":30.0,"gid":null,"locked":false,"text":"Interiror","fs":14,"br":8,"bs":1,"ha":"center","z":5,"th":"","bg":"transparent","bc":"transparent","tc":"","o":100,"ds":0,"sc":"#222222","td":"normal","bo":1,"i":0,"ls":0,"fixed":false,"fixed_type":1,"input_type":"text"},{"cid":"w3FD37C1F3D1479950937437","screen_cid":"s176607D4021479922156329","timestamp":20966066,"v":true,"name":"icon_button","left":235.0,"top":195.0,"width":45.0,"height":45.0,"gid":null,"locked":false,"is":100,"icon":"bus","br":0,"bs":0,"z":5,"th":"","bg":"","bc":"","tc":"","o":100,"ds":0,"sc":"#222222","ro":0,"ls":0,"fixed":false,"fixed_type":1,"ani_name":"none","ani_delay":"0","ani_count":"1","ani_duration":"0"},{"cid":"w361EED04781479950990160","screen_cid":"s176607D4021479922156329","timestamp":20966072,"v":true,"name":"mtext_input","left":235.0,"top":270.0,"width":90.0,"height":30.0,"gid":null,"locked":false,"text":"Exteriror","fs":14,"br":8,"bs":1,"ha":"center","z":5,"th":"","bg":"transparent","bc":"transparent","tc":"","o":100,"ds":0,"sc":"#222222","td":"normal","bo":1,"i":0,"ls":0,"fixed":false,"fixed_type":1,"input_type":"text"},{"cid":"wB548EFB57F1479951044055","screen_cid":"s176607D4021479922156329","timestamp":20966079,"v":true,"name":"icon_button","left":25.0,"top":400.0,"width":45.0,"height":45.0,"gid":null,"locked":false,"is":100,"icon":"wrench","br":0,"bs":0,"z":5,"th":"","bg":"","bc":"","tc":"","o":100,"ds":0,"sc":"#222222","ro":0,"ls":0,"fixed":false,"fixed_type":1,"ani_name":"none","ani_delay":"0","ani_count":"1","ani_duration":"0"},{"cid":"w7FC7824DBC1479951167373","screen_cid":"s176607D4021479922156329","timestamp":20966085,"v":true,"name":"mtext_input","left":30.0,"top":480.0,"width":100.0,"height":30.0,"gid":null,"locked":false,"text":"Maintenance","fs":14,"br":8,"bs":1,"ha":"center","z":5,"th":"","bg":"transparent","bc":"transparent","tc":"","o":100,"ds":0,"sc":"#222222","td":"normal","bo":1,"i":0,"ls":0,"fixed":false,"fixed_type":1,"input_type":"text"},{"cid":"w6AE58CD0E01479951225852","screen_cid":"s176607D4021479922156329","timestamp":20966093,"v":true,"name":"icon_button","left":230.0,"top":400.0,"width":45.0,"height":45.0,"gid":null,"locked":false,"is":90,"icon":"gears","br":0,"bs":0,"z":5,"th":"","bg":"","bc":"","tc":"","o":100,"ds":0,"sc":"#222222","ro":0,"ls":0,"fixed":false,"fixed_type":1,"ani_name":"none","ani_delay":"0","ani_count":"1","ani_duration":"0"},{"cid":"wD43E23167D1479951267425","screen_cid":"s176607D4021479922156329","timestamp":20966099,"v":true,"name":"mtext_input","left":230.0,"top":480.0,"width":100.0,"height":30.0,"gid":null,"locked":false,"text":"Engine","fs":14,"br":8,"bs":1,"ha":"center","z":5,"th":"","bg":"transparent","bc":"transparent","tc":"","o":100,"ds":0,"sc":"#222222","td":"normal","bo":1,"i":0,"ls":0,"fixed":false,"fixed_type":1,"input_type":"text"},{"cid":"wA5AEC2DD6A1479922420117","screen_cid":"s3B634DDB9C1479922410148","timestamp":20965675,"v":true,"name":"icon_button","left":20.0,"top":44.0,"width":30.0,"height":46.0,"gid":null,"locked":false,"is":60,"icon":"camera","br":0,"bs":0,"z":5,"th":"","bg":"","bc":"","tc":"","o":100,"ds":0,"sc":"#222222","ro":0,"ls":0,"fixed":false,"fixed_type":1,"ani_name":"none","ani_delay":"0","ani_count":"1","ani_duration":"0"},{"cid":"w9F7593DF4B1479922451917","screen_cid":"s3B634DDB9C1479922410148","timestamp":20965681,"v":true,"name":"icon_button","left":29.3333333333333,"top":560.0,"width":44.0,"height":38.6666666666667,"gid":"lD7312207A21479922497512","locked":false,"is":24,"icon":"chevron-circle-left","br":0,"bs":0,"z":5,"th":"","bg":"","bc":"","tc":"","o":100,"ds":0,"sc":"#222222","ro":0,"ls":0,"fixed":false,"fixed_type":1,"ani_name":"none","ani_delay":"0","ani_count":"1","ani_duration":"0"},{"cid":"w313BBDB41F1479922472256","screen_cid":"s3B634DDB9C1479922410148","timestamp":20965685,"v":true,"name":"icon_button","left":294.666666666667,"top":560.0,"width":45.3333333333333,"height":38.6666666666667,"gid":null,"locked":false,"is":24,"icon":"chevron-circle-right","br":0,"bs":0,"z":5,"th":"","bg":"","bc":"","tc":"","o":100,"ds":0,"sc":"#222222","ro":0,"ls":0,"fixed":false,"fixed_type":1,"ani_name":"none","ani_delay":"0","ani_count":"1","ani_duration":"0"},{"cid":"w718C1F9AC21479951780806","screen_cid":"s3B634DDB9C1479922410148","timestamp":20966189,"v":true,"name":"mtext_input","left":90.3333333333333,"top":40.0,"width":217.333333333333,"height":30.6666666666667,"gid":null,"locked":false,"text":"Camera Inspection","fs":23,"br":8,"bs":1,"ha":"center","z":5,"th":"","bg":"transparent","bc":"transparent","tc":"","o":100,"ds":0,"sc":"#222222","td":"normal","bo":1,"i":0,"ls":0,"fixed":false,"fixed_type":1,"input_type":"text"},{"cid":"wC0EBC4F73A1479922866161","screen_cid":"sC891EA8FC31479922858930","timestamp":20965696,"v":true,"name":"rounded_rect","left":0.0,"top":180.0,"width":350.666666666667,"height":249.333333333333,"gid":"g5DDD2B7DCBE45DF43AABD","locked":false,"text":"","fs":14,"br":0,"bs":0,"ha":"center","va":"middle","z":5,"lh":20,"th":"","td":"normal","bo":0,"i":0,"bg":"","bc":"","tc":"","o":100,"ts":0,"tsc":"#aaaaaa","ds":0,"sc":"#aaaaaa","ro":0,"padding":0,"ls":0,"fixed":false,"fixed_type":1,"ani_name":"none","ani_delay":"0","ani_count":"1","ani_duration":"0"},{"cid":"wFFA992383A1479922866175","screen_cid":"sC891EA8FC31479922858930","timestamp":20965700,"v":true,"name":"button","left":26.0,"top":213.666666666667,"width":40.0,"height":40.0,"gid":"g5DDD2B7DCBE45DF43AABD","locked":false,"text":"31","fs":14,"br":0,"bs":0,"ha":"center","va":"middle","z":5,"th":"","td":"normal","bo":0,"i":0,"bg":"","bc":"","tc":"","o":40,"ts":0,"tsc":"#aaaaaa","ds":0,"sc":"#aaaaaa","ro":0,"ls":0,"icon":null,"is":14,"fixed":false,"fixed_type":1,"ani_name":"none","ani_delay":"0","ani_count":"1","ani_duration":"0"},{"cid":"wFE3D758B761479922866188","screen_cid":"sC891EA8FC31479922858930","timestamp":20965704,"v":true,"name":"button","left":115.333333333333,"top":213.666666666667,"width":40.0,"height":40.0,"gid":"g5DDD2B7DCBE45DF43AABD","locked":false,"text":"2","fs":14,"br":0,"bs":0,"ha":"center","va":"middle","z":5,"th":"","td":"normal","bo":0,"i":0,"bg":"","bc":"","tc":"","o":100,"ts":0,"tsc":"#aaaaaa","ds":0,"sc":"#aaaaaa","ro":0,"ls":0,"icon":null,"is":14,"fixed":false,"fixed_type":1,"ani_name":"none","ani_delay":"0","ani_count":"1","ani_duration":"0"},{"cid":"w1A3B4AA2131479922866198","screen_cid":"sC891EA8FC31479922858930","timestamp":20965708,"v":true,"name":"button","left":26.0,"top":181.0,"width":40.0,"height":30.0,"gid":"g5DDD2B7DCBE45DF43AABD","locked":false,"text":"SUN","fs":14,"br":0,"bs":0,"ha":"center","va":"middle","z":5,"th":"","td":"normal","bo":0,"i":0,"bg":"","bc":"","tc":"","o":80,"ts":0,"tsc":"#aaaaaa","ds":0,"sc":"#aaaaaa","ro":0,"ls":0,"icon":null,"is":14,"fixed":false,"fixed_type":1,"ani_name":"none","ani_delay":"0","ani_count":"1","ani_duration":"0"},{"cid":"wF1B848689A1479922866207","screen_cid":"sC891EA8FC31479922858930","timestamp":20965712,"v":true,"name":"button","left":115.333333333333,"top":181.0,"width":40.0,"height":30.0,"gid":"g5DDD2B7DCBE45DF43AABD","locked":false,"text":"TUE","fs":14,"br":0,"bs":0,"ha":"center","va":"middle","z":5,"th":"","td":"normal","bo":0,"i":0,"bg":"","bc":"","tc":"","o":100,"ts":0,"tsc":"#aaaaaa","ds":0,"sc":"#aaaaaa","ro":0,"ls":0,"icon":null,"is":14,"fixed":false,"fixed_type":1,"ani_name":"none","ani_delay":"0","ani_count":"1","ani_duration":"0"},{"cid":"w35E0D41D5C1479922866216","screen_cid":"sC891EA8FC31479922858930","timestamp":20965716,"v":true,"name":"button","left":26.0,"top":256.333333333333,"width":40.0,"height":40.0,"gid":"g5DDD2B7DCBE45DF43AABD","locked":false,"text":"7","fs":14,"br":0,"bs":0,"ha":"center","va":"middle","z":5,"th":"","td":"normal","bo":0,"i":0,"bg":"","bc":"","tc":"","o":100,"ts":0,"tsc":"#aaaaaa","ds":0,"sc":"#aaaaaa","ro":0,"ls":0,"icon":null,"is":14,"fixed":false,"fixed_type":1,"ani_name":"none","ani_delay":"0","ani_count":"1","ani_duration":"0"},{"cid":"w816B8E848A1479922866226","screen_cid":"sC891EA8FC31479922858930","timestamp":20965720,"v":true,"name":"button","left":115.333333333333,"top":256.333333333333,"width":40.0,"height":40.0,"gid":"g5DDD2B7DCBE45DF43AABD","locked":false,"text":"9","fs":14,"br":0,"bs":0,"ha":"center","va":"middle","z":5,"th":"","td":"normal","bo":0,"i":0,"bg":"","bc":"","tc":"","o":100,"ts":0,"tsc":"#aaaaaa","ds":0,"sc":"#aaaaaa","ro":0,"ls":0,"icon":null,"is":14,"fixed":false,"fixed_type":1,"ani_name":"none","ani_delay":"0","ani_count":"1","ani_duration":"0"},{"cid":"w92E9065F4D1479922866235","screen_cid":"sC891EA8FC31479922858930","timestamp":20965724,"v":true,"name":"button","left":70.6666666666666,"top":213.666666666667,"width":40.0,"height":40.0,"gid":"g5DDD2B7DCBE45DF43AABD","locked":false,"text":"1","fs":14,"br":0,"bs":0,"ha":"center","va":"middle","z":5,"th":"","td":"normal","bo":0,"i":0,"bg":"","bc":"","tc":"","o":100,"ts":0,"tsc":"#aaaaaa","ds":0,"sc":"#aaaaaa","ro":0,"ls":0,"icon":null,"is":14,"fixed":false,"fixed_type":1,"ani_name":"none","ani_delay":"0","ani_count":"1","ani_duration":"0"},{"cid":"w86842A31FF1479922866247","screen_cid":"sC891EA8FC31479922858930","timestamp":20965728,"v":true,"name":"button","left":294.0,"top":213.666666666667,"width":40.0,"height":40.0,"gid":"g5DDD2B7DCBE45DF43AABD","locked":false,"text":"6","fs":14,"br":0,"bs":0,"ha":"center","va":"middle","z":5,"th":"","td":"normal","bo":0,"i":0,"bg":"","bc":"","tc":"","o":100,"ts":0,"tsc":"#aaaaaa","ds":0,"sc":"#aaaaaa","ro":0,"ls":0,"icon":null,"is":14,"fixed":false,"fixed_type":1,"ani_name":"none","ani_delay":"0","ani_count":"1","ani_duration":"0"},{"cid":"w9ABD4AD9C11479922866256","screen_cid":"sC891EA8FC31479922858930","timestamp":20965732,"v":true,"name":"button","left":70.6666666666667,"top":181.0,"width":40.0,"height":30.0,"gid":"g5DDD2B7DCBE45DF43AABD","locked":false,"text":"MON","fs":14,"br":0,"bs":0,"ha":"center","va":"middle","z":5,"th":"","td":"normal","bo":0,"i":0,"bg":"","bc":"","tc":"","o":100,"ts":0,"tsc":"#aaaaaa","ds":0,"sc":"#aaaaaa","ro":0,"ls":0,"icon":null,"is":14,"fixed":false,"fixed_type":1,"ani_name":"none","ani_delay":"0","ani_count":"1","ani_duration":"0"},{"cid":"w2945A293091479922866266","screen_cid":"sC891EA8FC31479922858930","timestamp":20965736,"v":true,"name":"button","left":294.0,"top":181.0,"width":40.0,"height":30.0,"gid":"g5DDD2B7DCBE45DF43AABD","locked":false,"text":"SAT","fs":14,"br":0,"bs":0,"ha":"center","va":"middle","z":5,"th":"","td":"normal","bo":0,"i":0,"bg":"","bc":"","tc":"","o":80,"ts":0,"tsc":"#aaaaaa","ds":0,"sc":"#aaaaaa","ro":0,"ls":0,"icon":null,"is":14,"fixed":false,"fixed_type":1,"ani_name":"none","ani_delay":"0","ani_count":"1","ani_duration":"0"},{"cid":"wB80FE61BEC1479922866275","screen_cid":"sC891EA8FC31479922858930","timestamp":20965740,"v":true,"name":"button","left":70.6666666666666,"top":256.333333333333,"width":40.0,"height":40.0,"gid":"g5DDD2B7DCBE45DF43AABD","locked":false,"text":"8","fs":14,"br":0,"bs":0,"ha":"center","va":"middle","z":5,"th":"","td":"normal","bo":0,"i":0,"bg":"","bc":"","tc":"","o":100,"ts":0,"tsc":"#aaaaaa","ds":0,"sc":"#aaaaaa","ro":0,"ls":0,"icon":null,"is":14,"fixed":false,"fixed_type":1,"ani_name":"none","ani_delay":"0","ani_count":"1","ani_duration":"0"},{"cid":"wBBF32F20CD1479922866285","screen_cid":"sC891EA8FC31479922858930","timestamp":20965744,"v":true,"name":"button","left":294.0,"top":256.333333333333,"width":40.0,"height":40.0,"gid":"g5DDD2B7DCBE45DF43AABD","locked":false,"text":"13","fs":14,"br":0,"bs":0,"ha":"center","va":"middle","z":5,"th":"","td":"normal","bo":0,"i":0,"bg":"","bc":"","tc":"","o":100,"ts":0,"tsc":"#aaaaaa","ds":0,"sc":"#aaaaaa","ro":0,"ls":0,"icon":null,"is":14,"fixed":false,"fixed_type":1,"ani_name":"none","ani_delay":"0","ani_count":"1","ani_duration":"0"},{"cid":"w38B6B0E4FE1479922866297","screen_cid":"sC891EA8FC31479922858930","timestamp":20965748,"v":true,"name":"button","left":26.0,"top":300.0,"width":40.0,"height":40.0,"gid":"g5DDD2B7DCBE45DF43AABD","locked":false,"text":"14","fs":14,"br":0,"bs":0,"ha":"center","va":"middle","z":5,"th":"","td":"normal","bo":0,"i":0,"bg":"","bc":"","tc":"","o":100,"ts":0,"tsc":"#aaaaaa","ds":0,"sc":"#aaaaaa","ro":0,"ls":0,"icon":null,"is":14,"fixed":false,"fixed_type":1,"ani_name":"none","ani_delay":"0","ani_count":"1","ani_duration":"0"},{"cid":"w6E6D20CC341479922866306","screen_cid":"sC891EA8FC31479922858930","timestamp":20965752,"v":true,"name":"button","left":115.333333333333,"top":300.0,"width":40.0,"height":40.0,"gid":"g5DDD2B7DCBE45DF43AABD","locked":false,"text":"16","fs":14,"br":0,"bs":0,"ha":"center","va":"middle","z":5,"th":"","td":"normal","bo":0,"i":0,"bg":"","bc":"","tc":"","o":100,"ts":0,"tsc":"#aaaaaa","ds":0,"sc":"#aaaaaa","ro":0,"ls":0,"icon":null,"is":14,"fixed":false,"fixed_type":1,"ani_name":"none","ani_delay":"0","ani_count":"1","ani_duration":"0"},{"cid":"wB7B5D1398A1479922866316","screen_cid":"sC891EA8FC31479922858930","timestamp":20965756,"v":true,"name":"button","left":204.666666666667,"top":213.666666666667,"width":40.0,"height":40.0,"gid":"g5DDD2B7DCBE45DF43AABD","locked":false,"text":"4","fs":14,"br":0,"bs":0,"ha":"center","va":"middle","z":5,"th":"","td":"normal","bo":0,"i":0,"bg":"","bc":"","tc":"","o":100,"ts":0,"tsc":"#aaaaaa","ds":0,"sc":"#aaaaaa","ro":0,"ls":0,"icon":null,"is":14,"fixed":false,"fixed_type":1,"ani_name":"none","ani_delay":"0","ani_count":"1","ani_duration":"0"},{"cid":"w44574C0B0E1479922866326","screen_cid":"sC891EA8FC31479922858930","timestamp":20965760,"v":true,"name":"button","left":204.666666666667,"top":181.0,"width":40.0,"height":30.0,"gid":"g5DDD2B7DCBE45DF43AABD","locked":false,"text":"THU","fs":14,"br":0,"bs":0,"ha":"center","va":"middle","z":5,"th":"","td":"normal","bo":0,"i":0,"bg":"","bc":"","tc":"","o":100,"ts":0,"tsc":"#aaaaaa","ds":0,"sc":"#aaaaaa","ro":0,"ls":0,"icon":null,"is":14,"fixed":false,"fixed_type":1,"ani_name":"none","ani_delay":"0","ani_count":"1","ani_duration":"0"},{"cid":"wDDD28085A81479922866335","screen_cid":"sC891EA8FC31479922858930","timestamp":20965764,"v":true,"name":"button","left":204.666666666667,"top":256.333333333333,"width":40.0,"height":40.0,"gid":"g5DDD2B7DCBE45DF43AABD","locked":false,"text":"11","fs":14,"br":0,"bs":0,"ha":"center","va":"middle","z":5,"th":"","td":"normal","bo":0,"i":0,"bg":"","bc":"","tc":"","o":100,"ts":0,"tsc":"#aaaaaa","ds":0,"sc":"#aaaaaa","ro":0,"ls":0,"icon":null,"is":14,"fixed":false,"fixed_type":1,"ani_name":"none","ani_delay":"0","ani_count":"1","ani_duration":"0"},{"cid":"w886CE468D71479922866345","screen_cid":"sC891EA8FC31479922858930","timestamp":20965768,"v":true,"name":"button","left":70.6666666666666,"top":300.0,"width":40.0,"height":40.0,"gid":"g5DDD2B7DCBE45DF43AABD","locked":false,"text":"15","fs":14,"br":0,"bs":0,"ha":"center","va":"middle","z":5,"th":"","td":"normal","bo":0,"i":0,"bg":"","bc":"","tc":"","o":100,"ts":0,"tsc":"#aaaaaa","ds":0,"sc":"#aaaaaa","ro":0,"ls":0,"icon":null,"is":14,"fixed":false,"fixed_type":1,"ani_name":"none","ani_delay":"0","ani_count":"1","ani_duration":"0"},{"cid":"wC47273A8891479922866355","screen_cid":"sC891EA8FC31479922858930","timestamp":20965772,"v":true,"name":"button","left":294.0,"top":300.0,"width":40.0,"height":40.0,"gid":"g5DDD2B7DCBE45DF43AABD","locked":false,"text":"20","fs":14,"br":0,"bs":0,"ha":"center","va":"middle","z":5,"th":"","td":"normal","bo":0,"i":0,"bg":"","bc":"","tc":"","o":100,"ts":0,"tsc":"#aaaaaa","ds":0,"sc":"#aaaaaa","ro":0,"ls":0,"icon":null,"is":14,"fixed":false,"fixed_type":1,"ani_name":"none","ani_delay":"0","ani_count":"1","ani_duration":"0"},{"cid":"w2ADE7782C11479922866365","screen_cid":"sC891EA8FC31479922858930","timestamp":20965776,"v":true,"name":"button","left":115.333333333333,"top":342.666666666667,"width":40.0,"height":40.0,"gid":"g5DDD2B7DCBE45DF43AABD","locked":false,"text":"23","fs":14,"br":0,"bs":0,"ha":"center","va":"middle","z":5,"th":"","td":"normal","bo":0,"i":0,"bg":"","bc":"","tc":"","o":100,"ts":0,"tsc":"#aaaaaa","ds":0,"sc":"#aaaaaa","ro":0,"ls":0,"icon":null,"is":14,"fixed":false,"fixed_type":1,"ani_name":"none","ani_delay":"0","ani_count":"1","ani_duration":"0"},{"cid":"wF75DFACD031479922866376","screen_cid":"sC891EA8FC31479922858930","timestamp":20965780,"v":true,"name":"button","left":249.333333333333,"top":213.666666666667,"width":40.0,"height":40.0,"gid":"g5DDD2B7DCBE45DF43AABD","locked":false,"text":"5","fs":14,"br":0,"bs":0,"ha":"center","va":"middle","z":5,"th":"","td":"normal","bo":0,"i":0,"bg":"","bc":"","tc":"","o":100,"ts":0,"tsc":"#aaaaaa","ds":0,"sc":"#aaaaaa","ro":0,"ls":0,"icon":null,"is":14,"fixed":false,"fixed_type":1,"ani_name":"none","ani_delay":"0","ani_count":"1","ani_duration":"0"},{"cid":"w16AB790B941479922866387","screen_cid":"sC891EA8FC31479922858930","timestamp":20965784,"v":true,"name":"button","left":160.0,"top":213.666666666667,"width":40.0,"height":40.0,"gid":"g5DDD2B7DCBE45DF43AABD","locked":false,"text":"3","fs":14,"br":0,"bs":0,"ha":"center","va":"middle","z":5,"th":"","td":"normal","bo":0,"i":0,"bg":"","bc":"","tc":"","o":100,"ts":0,"tsc":"#aaaaaa","ds":0,"sc":"#aaaaaa","ro":0,"ls":0,"icon":null,"is":14,"fixed":false,"fixed_type":1,"ani_name":"none","ani_delay":"0","ani_count":"1","ani_duration":"0"},{"cid":"w8510EA491C1479922866398","screen_cid":"sC891EA8FC31479922858930","timestamp":20965788,"v":true,"name":"button","left":26.0,"top":342.666666666667,"width":40.0,"height":40.0,"gid":"g5DDD2B7DCBE45DF43AABD","locked":false,"text":"21","fs":14,"br":0,"bs":0,"ha":"center","va":"middle","z":5,"th":"","td":"normal","bo":0,"i":0,"bg":"","bc":"","tc":"","o":100,"ts":0,"tsc":"#aaaaaa","ds":0,"sc":"#aaaaaa","ro":0,"ls":0,"icon":null,"is":14,"fixed":false,"fixed_type":1,"ani_name":"none","ani_delay":"0","ani_count":"1","ani_duration":"0"},{"cid":"wED524260AF1479922866411","screen_cid":"sC891EA8FC31479922858930","timestamp":20965792,"v":true,"name":"button","left":248.333333333333,"top":181.0,"width":40.0,"height":30.0,"gid":"g5DDD2B7DCBE45DF43AABD","locked":false,"text":"FRI","fs":14,"br":0,"bs":0,"ha":"center","va":"middle","z":5,"th":"","td":"normal","bo":0,"i":0,"bg":"","bc":"","tc":"","o":100,"ts":0,"tsc":"#aaaaaa","ds":0,"sc":"#aaaaaa","ro":0,"ls":0,"icon":null,"is":14,"fixed":false,"fixed_type":1,"ani_name":"none","ani_delay":"0","ani_count":"1","ani_duration":"0"},{"cid":"wE1F703CBFD1479922866422","screen_cid":"sC891EA8FC31479922858930","timestamp":20965796,"v":true,"name":"button","left":160.0,"top":181.0,"width":40.0,"height":30.0,"gid":"g5DDD2B7DCBE45DF43AABD","locked":false,"text":"WED","fs":14,"br":0,"bs":0,"ha":"center","va":"middle","z":5,"th":"","td":"normal","bo":0,"i":0,"bg":"","bc":"","tc":"","o":100,"ts":0,"tsc":"#aaaaaa","ds":0,"sc":"#aaaaaa","ro":0,"ls":0,"icon":null,"is":14,"fixed":false,"fixed_type":1,"ani_name":"none","ani_delay":"0","ani_count":"1","ani_duration":"0"},{"cid":"wFD71FD482B1479922866433","screen_cid":"sC891EA8FC31479922858930","timestamp":20965800,"v":true,"name":"button","left":249.333333333333,"top":256.333333333333,"width":40.0,"height":40.0,"gid":"g5DDD2B7DCBE45DF43AABD","locked":false,"text":"12","fs":14,"br":0,"bs":0,"ha":"center","va":"middle","z":5,"th":"","td":"normal","bo":0,"i":0,"bg":"","bc":"","tc":"","o":100,"ts":0,"tsc":"#aaaaaa","ds":0,"sc":"#aaaaaa","ro":0,"ls":0,"icon":null,"is":14,"fixed":false,"fixed_type":1,"ani_name":"none","ani_delay":"0","ani_count":"1","ani_duration":"0"},{"cid":"wED897B97091479922866444","screen_cid":"sC891EA8FC31479922858930","timestamp":20965804,"v":true,"name":"button","left":160.0,"top":256.0,"width":40.0,"height":40.0,"gid":"g5DDD2B7DCBE45DF43AABD","locked":false,"text":"10","fs":14,"br":0,"bs":1,"ha":"center","va":"middle","z":5,"th":"red","td":"normal","bo":0,"i":0,"bg":"#e84e40","bc":"#dd191d","tc":"#fff","o":80,"ts":0,"tsc":"#aaaaaa","ds":0,"sc":"#aaaaaa","ro":0,"ls":0,"icon":null,"is":14,"fixed":false,"fixed_type":1,"ani_name":"none","ani_delay":"0","ani_count":"1","ani_duration":"0"},{"cid":"w924770EA821479922866455","screen_cid":"sC891EA8FC31479922858930","timestamp":20965808,"v":true,"name":"button","left":204.666666666667,"top":300.0,"width":40.0,"height":40.0,"gid":"g5DDD2B7DCBE45DF43AABD","locked":false,"text":"18","fs":14,"br":0,"bs":0,"ha":"center","va":"middle","z":5,"th":"","td":"normal","bo":0,"i":0,"bg":"","bc":"","tc":"","o":100,"ts":0,"tsc":"#aaaaaa","ds":0,"sc":"#aaaaaa","ro":0,"ls":0,"icon":null,"is":14,"fixed":false,"fixed_type":1,"ani_name":"none","ani_delay":"0","ani_count":"1","ani_duration":"0"},{"cid":"w7735DE8F341479922866465","screen_cid":"sC891EA8FC31479922858930","timestamp":20965812,"v":true,"name":"button","left":70.6666666666666,"top":342.666666666667,"width":40.0,"height":40.0,"gid":"g5DDD2B7DCBE45DF43AABD","locked":false,"text":"22","fs":14,"br":0,"bs":0,"ha":"center","va":"middle","z":5,"th":"","td":"normal","bo":0,"i":0,"bg":"","bc":"","tc":"","o":100,"ts":0,"tsc":"#aaaaaa","ds":0,"sc":"#aaaaaa","ro":0,"ls":0,"icon":null,"is":14,"fixed":false,"fixed_type":1,"ani_name":"none","ani_delay":"0","ani_count":"1","ani_duration":"0"},{"cid":"w2FB3C6AAED1479922866476","screen_cid":"sC891EA8FC31479922858930","timestamp":20965816,"v":true,"name":"button","left":294.0,"top":342.666666666667,"width":40.0,"height":40.0,"gid":"g5DDD2B7DCBE45DF43AABD","locked":false,"text":"27","fs":14,"br":0,"bs":0,"ha":"center","va":"middle","z":5,"th":"","td":"normal","bo":0,"i":0,"bg":"","bc":"","tc":"","o":100,"ts":0,"tsc":"#aaaaaa","ds":0,"sc":"#aaaaaa","ro":0,"ls":0,"icon":null,"is":14,"fixed":false,"fixed_type":1,"ani_name":"none","ani_delay":"0","ani_count":"1","ani_duration":"0"},{"cid":"w322FA07F4D1479922866488","screen_cid":"sC891EA8FC31479922858930","timestamp":20965820,"v":true,"name":"button","left":115.333333333333,"top":387.333333333333,"width":40.0,"height":40.0,"gid":"g5DDD2B7DCBE45DF43AABD","locked":false,"text":"30","fs":14,"br":0,"bs":0,"ha":"center","va":"middle","z":5,"th":"","td":"normal","bo":0,"i":0,"bg":"","bc":"","tc":"","o":100,"ts":0,"tsc":"#aaaaaa","ds":0,"sc":"#aaaaaa","ro":0,"ls":0,"icon":null,"is":14,"fixed":false,"fixed_type":1,"ani_name":"none","ani_delay":"0","ani_count":"1","ani_duration":"0"},{"cid":"w22681186761479922866499","screen_cid":"sC891EA8FC31479922858930","timestamp":20965824,"v":true,"name":"button","left":26.0,"top":387.333333333333,"width":40.0,"height":40.0,"gid":"g5DDD2B7DCBE45DF43AABD","locked":false,"text":"28","fs":14,"br":0,"bs":0,"ha":"center","va":"middle","z":5,"th":"","td":"normal","bo":0,"i":0,"bg":"","bc":"","tc":"","o":100,"ts":0,"tsc":"#aaaaaa","ds":0,"sc":"#aaaaaa","ro":0,"ls":0,"icon":null,"is":14,"fixed":false,"fixed_type":1,"ani_name":"none","ani_delay":"0","ani_count":"1","ani_duration":"0"},{"cid":"wEA816F8E921479922866511","screen_cid":"sC891EA8FC31479922858930","timestamp":20965828,"v":true,"name":"button","left":249.333333333333,"top":300.0,"width":40.0,"height":40.0,"gid":"g5DDD2B7DCBE45DF43AABD","locked":false,"text":"19","fs":14,"br":0,"bs":0,"ha":"center","va":"middle","z":5,"th":"","td":"normal","bo":0,"i":0,"bg":"","bc":"","tc":"","o":100,"ts":0,"tsc":"#aaaaaa","ds":0,"sc":"#aaaaaa","ro":0,"ls":0,"icon":null,"is":14,"fixed":false,"fixed_type":1,"ani_name":"none","ani_delay":"0","ani_count":"1","ani_duration":"0"},{"cid":"w5B6B89A1D11479922866525","screen_cid":"sC891EA8FC31479922858930","timestamp":20965832,"v":true,"name":"button","left":160.0,"top":300.0,"width":40.0,"height":40.0,"gid":"g5DDD2B7DCBE45DF43AABD","locked":false,"text":"17","fs":14,"br":0,"bs":0,"ha":"center","va":"middle","z":5,"th":"","td":"normal","bo":0,"i":0,"bg":"","bc":"","tc":"","o":100,"ts":0,"tsc":"#aaaaaa","ds":0,"sc":"#aaaaaa","ro":0,"ls":0,"icon":null,"is":14,"fixed":false,"fixed_type":1,"ani_name":"none","ani_delay":"0","ani_count":"1","ani_duration":"0"},{"cid":"w84B63B66251479922866536","screen_cid":"sC891EA8FC31479922858930","timestamp":20965836,"v":true,"name":"button","left":204.666666666667,"top":342.666666666667,"width":40.0,"height":40.0,"gid":"g5DDD2B7DCBE45DF43AABD","locked":false,"text":"25","fs":14,"br":0,"bs":0,"ha":"center","va":"middle","z":5,"th":"","td":"normal","bo":0,"i":0,"bg":"","bc":"","tc":"","o":100,"ts":0,"tsc":"#aaaaaa","ds":0,"sc":"#aaaaaa","ro":0,"ls":0,"icon":null,"is":14,"fixed":false,"fixed_type":1,"ani_name":"none","ani_delay":"0","ani_count":"1","ani_duration":"0"},{"cid":"w56E07DCD3E1479922866547","screen_cid":"sC891EA8FC31479922858930","timestamp":20965840,"v":true,"name":"button","left":70.6666666666666,"top":387.333333333333,"width":40.0,"height":40.0,"gid":"g5DDD2B7DCBE45DF43AABD","locked":false,"text":"29","fs":14,"br":0,"bs":0,"ha":"center","va":"middle","z":5,"th":"","td":"normal","bo":0,"i":0,"bg":"","bc":"","tc":"","o":100,"ts":0,"tsc":"#aaaaaa","ds":0,"sc":"#aaaaaa","ro":0,"ls":0,"icon":null,"is":14,"fixed":false,"fixed_type":1,"ani_name":"none","ani_delay":"0","ani_count":"1","ani_duration":"0"},{"cid":"w0A4C3513C91479922866558","screen_cid":"sC891EA8FC31479922858930","timestamp":20965844,"v":true,"name":"button","left":294.0,"top":387.333333333333,"width":40.0,"height":40.0,"gid":"g5DDD2B7DCBE45DF43AABD","locked":false,"text":"4","fs":14,"br":0,"bs":0,"ha":"center","va":"middle","z":5,"th":"light","td":"normal","bo":0,"i":0,"bg":"","bc":"","tc":"#333333","o":40,"ts":0,"tsc":"#aaaaaa","ds":0,"sc":"#aaaaaa","ro":0,"ls":0,"icon":null,"is":14,"fixed":false,"fixed_type":1,"ani_name":"none","ani_delay":"0","ani_count":"1","ani_duration":"0"},{"cid":"wD04B59DF601479922866569","screen_cid":"sC891EA8FC31479922858930","timestamp":20965848,"v":true,"name":"button","left":249.333333333333,"top":342.666666666667,"width":40.0,"height":40.0,"gid":"g5DDD2B7DCBE45DF43AABD","locked":false,"text":"26","fs":14,"br":0,"bs":0,"ha":"center","va":"middle","z":5,"th":"","td":"normal","bo":0,"i":0,"bg":"","bc":"","tc":"","o":100,"ts":0,"tsc":"#aaaaaa","ds":0,"sc":"#aaaaaa","ro":0,"ls":0,"icon":null,"is":14,"fixed":false,"fixed_type":1,"ani_name":"none","ani_delay":"0","ani_count":"1","ani_duration":"0"},{"cid":"w6C680313691479922866580","screen_cid":"sC891EA8FC31479922858930","timestamp":20965852,"v":true,"name":"button","left":160.0,"top":342.666666666667,"width":40.0,"height":40.0,"gid":"g5DDD2B7DCBE45DF43AABD","locked":false,"text":"24","fs":14,"br":0,"bs":0,"ha":"center","va":"middle","z":5,"th":"","td":"normal","bo":0,"i":0,"bg":"","bc":"","tc":"","o":100,"ts":0,"tsc":"#aaaaaa","ds":0,"sc":"#aaaaaa","ro":0,"ls":0,"icon":null,"is":14,"fixed":false,"fixed_type":1,"ani_name":"none","ani_delay":"0","ani_count":"1","ani_duration":"0"},{"cid":"wF1BF0483521479922866591","screen_cid":"sC891EA8FC31479922858930","timestamp":20965856,"v":true,"name":"button","left":204.666666666667,"top":387.333333333333,"width":40.0,"height":40.0,"gid":"g5DDD2B7DCBE45DF43AABD","locked":false,"text":"2","fs":14,"br":0,"bs":0,"ha":"center","va":"middle","z":5,"th":"light","td":"normal","bo":0,"i":0,"bg":"","bc":"","tc":"#333333","o":40,"ts":0,"tsc":"#aaaaaa","ds":0,"sc":"#aaaaaa","ro":0,"ls":0,"icon":null,"is":14,"fixed":false,"fixed_type":1,"ani_name":"none","ani_delay":"0","ani_count":"1","ani_duration":"0"},{"cid":"w9D68432E411479922866602","screen_cid":"sC891EA8FC31479922858930","timestamp":20965860,"v":true,"name":"button","left":249.333333333333,"top":387.333333333333,"width":40.0,"height":40.0,"gid":"g5DDD2B7DCBE45DF43AABD","locked":false,"text":"3","fs":14,"br":0,"bs":0,"ha":"center","va":"middle","z":5,"th":"light","td":"normal","bo":0,"i":0,"bg":"","bc":"","tc":"#333333","o":40,"ts":0,"tsc":"#aaaaaa","ds":0,"sc":"#aaaaaa","ro":0,"ls":0,"icon":null,"is":14,"fixed":false,"fixed_type":1,"ani_name":"none","ani_delay":"0","ani_count":"1","ani_duration":"0"},{"cid":"w55C77EE85B1479922866614","screen_cid":"sC891EA8FC31479922858930","timestamp":20965864,"v":true,"name":"button","left":160.0,"top":387.333333333333,"width":40.0,"height":40.0,"gid":"g5DDD2B7DCBE45DF43AABD","locked":false,"text":"1","fs":14,"br":0,"bs":0,"ha":"center","va":"middle","z":5,"th":"light","td":"normal","bo":0,"i":0,"bg":"","bc":"","tc":"#333333","o":40,"ts":0,"tsc":"#aaaaaa","ds":0,"sc":"#aaaaaa","ro":0,"ls":0,"icon":null,"is":14,"fixed":false,"fixed_type":1,"ani_name":"none","ani_delay":"0","ani_count":"1","ani_duration":"0"},{"cid":"wC4830E82EA1479922866625","screen_cid":"sC891EA8FC31479922858930","timestamp":20965868,"v":true,"name":"hr","left":26.0,"top":206.666666666667,"width":308.0,"height":10.0,"gid":"g5DDD2B7DCBE45DF43AABD","locked":false,"z":5,"th":"pink","bc":"#d81b60","ls":0,"ro":0,"fixed":false,"fixed_type":1,"ani_name":"none","ani_delay":"0","ani_count":"1","ani_duration":"0"},{"cid":"wAF80E767F21479922962126","screen_cid":"sC891EA8FC31479922858930","timestamp":20966016,"v":true,"name":"icon_button","left":20.0,"top":552.0,"width":45.0,"height":45.0,"gid":"l1968D70AFF1479922998194","locked":false,"is":24,"icon":"chevron-circle-left","br":0,"bs":0,"z":5,"th":"","bg":"","bc":"","tc":"","o":100,"ds":0,"sc":"#222222","ro":0,"ls":0,"fixed":false,"fixed_type":1,"ani_name":"none","ani_delay":"0","ani_count":"1","ani_duration":"0"},{"cid":"wF6BD6D1D861479922976152","screen_cid":"sC891EA8FC31479922858930","timestamp":20966020,"v":true,"name":"icon_button","left":293.0,"top":552.0,"width":45.0,"height":45.0,"gid":null,"locked":false,"is":24,"icon":"chevron-circle-right","br":0,"bs":0,"z":5,"th":"","bg":"","bc":"","tc":"","o":100,"ds":0,"sc":"#222222","ro":0,"ls":0,"fixed":false,"fixed_type":1,"ani_name":"none","ani_delay":"0","ani_count":"1","ani_duration":"0"}],"links":[{"cid":"lC82A81118E1479921744601","screen_cid":"s335BD175111479903920225","target_cid":"s28E19752C51479903920246","transition":"slideright","gesture":"tap","timer":0.0,"menu_offset":75,"reset":true,"ani_duration":"0.75s","ani_delay":"","state_cid":null,"widget_cids":"","targetstate_cid":null,"sourcestate_cid":"default"},{"cid":"l6350BFDA7F1479921887390","screen_cid":"s335BD175111479903920225","target_cid":"sBBC26AA2621479920905427","transition":"slideleft","gesture":"tap","timer":0.0,"menu_offset":75,"reset":true,"ani_duration":"0.75s","ani_delay":"","state_cid":null,"widget_cids":"","targetstate_cid":null,"sourcestate_cid":"default"},{"cid":"l0503E62D811479922343815","screen_cid":"s335BD175111479903920225","target_cid":"s176607D4021479922156329","transition":"slideleft","gesture":"tap","timer":0.0,"menu_offset":75,"reset":true,"ani_duration":"0.75s","ani_delay":"","state_cid":null,"widget_cids":"","targetstate_cid":null,"sourcestate_cid":"default"},{"cid":"l2C8D57DD451479922517548","screen_cid":"s335BD175111479903920225","target_cid":"s3B634DDB9C1479922410148","transition":"slideleft","gesture":"tap","timer":0.0,"menu_offset":75,"reset":true,"ani_duration":"0.75s","ani_delay":"","state_cid":null,"widget_cids":"","targetstate_cid":null,"sourcestate_cid":"default"},{"cid":"l3E0962C8881485237633926","screen_cid":"s335BD175111479903920225","target_cid":"sC891EA8FC31479922858930","transition":"slideleft","gesture":"tap","timer":0.0,"menu_offset":75,"reset":true,"ani_duration":"0.2s","ani_delay":"","state_cid":null,"widget_cids":"","targetstate_cid":null,"sourcestate_cid":"default"},{"cid":"lAA0B0724511479921913502","screen_cid":"s28E19752C51479903920246","target_cid":"s335BD175111479903920225","transition":"slideleft","gesture":"tap","timer":0.0,"menu_offset":75,"reset":true,"ani_duration":"0.75s","ani_delay":"","state_cid":null,"widget_cids":"","targetstate_cid":null,"sourcestate_cid":"default"},{"cid":"l595CDB19C31479922095638","screen_cid":"sBBC26AA2621479920905427","target_cid":"s335BD175111479903920225","transition":"slideleft","gesture":"tap","timer":0.0,"menu_offset":75,"reset":true,"ani_duration":"0.75s","ani_delay":"","state_cid":null,"widget_cids":"","targetstate_cid":null,"sourcestate_cid":"default"},{"cid":"l58A67B112A1479922282950","screen_cid":"s176607D4021479922156329","target_cid":"s335BD175111479903920225","transition":"slideright","gesture":"tap","timer":0.0,"menu_offset":75,"reset":true,"ani_duration":"0.75s","ani_delay":"","state_cid":null,"widget_cids":"","targetstate_cid":null,"sourcestate_cid":"default"},{"cid":"lD7312207A21479922497512","screen_cid":"s3B634DDB9C1479922410148","target_cid":"s335BD175111479903920225","transition":"slideright","gesture":"tap","timer":0.0,"menu_offset":75,"reset":true,"ani_duration":"0.75s","ani_delay":"","state_cid":null,"widget_cids":"","targetstate_cid":null,"sourcestate_cid":"default"},{"cid":"l1968D70AFF1479922998194","screen_cid":"sC891EA8FC31479922858930","target_cid":"s335BD175111479903920225","transition":"slideleft","gesture":"tap","timer":0.0,"menu_offset":75,"reset":true,"ani_duration":"0.75s","ani_delay":"","state_cid":null,"widget_cids":"","targetstate_cid":null,"sourcestate_cid":"default"}],"panels":[],"screen_aligns":[{"cid":"s28E19752C51479903920246","h":"","v":""}],"screenstates":[{"cid":"ss1F5E3952C51479920868908","screen_cid":"s335BD175111479903920225","timestamp":1479969047,"hh":null,"fh":null,"name":null},{"cid":"ss95CECA29D91479919745272","screen_cid":"s28E19752C51479903920246","timestamp":1479967918,"hh":19,"fh":22,"name":null},{"cid":"ssDBCD8338661479919748842","screen_cid":"s28E19752C51479903920246","timestamp":1479967938,"hh":19,"fh":22,"name":"State 3"}],"widgetstates":[{"cid":"ss95CECA29D91479919745272w67BB9FAA481479919377509","screen_cid":null,"timestamp":20965386,"v":true,"name":"icon_button","left":70.0,"top":310.0,"width":220.0,"height":140.0,"gid":null,"locked":false,"is":24,"icon":"caret-up","br":0,"bs":0,"z":5,"th":"","bg":"","bc":"","tc":"","o":100,"ds":0,"sc":"#222222","ro":0,"ls":0,"fixed":false,"fixed_type":1,"ani_name":"none","ani_delay":"0","ani_count":"1","ani_duration":"0","screenstate_cid":"ss95CECA29D91479919745272","widget_cid":"w67BB9FAA481479919377509"},{"cid":"ss95CECA29D91479919745272w512B3DC3AA1479919270397","screen_cid":null,"timestamp":20965365,"v":true,"name":"icon_button","left":60.0,"top":138.0,"width":220.0,"height":176.0,"gid":null,"locked":false,"is":24,"icon":"caret-up","br":0,"bs":0,"z":5,"th":"","bg":"","bc":"","tc":"","o":100,"ds":0,"sc":"#222222","ro":0,"ls":0,"fixed":false,"fixed_type":1,"ani_name":"none","ani_delay":"0","ani_count":"1","ani_duration":"0","screenstate_cid":"ss95CECA29D91479919745272","widget_cid":"w512B3DC3AA1479919270397"},{"cid":"ss95CECA29D91479919745272w6312F193B11479919009159","screen_cid":null,"timestamp":20965331,"v":true,"name":"icon_button","left":100.0,"top":165.0,"width":160.0,"height":135.0,"gid":null,"locked":false,"is":88,"icon":"car","br":0,"bs":0,"z":5,"th":"","bg":"","bc":"","tc":"","o":100,"ds":0,"sc":"#222222","ro":0,"ls":0,"fixed":false,"fixed_type":1,"ani_name":"none","ani_delay":"0","ani_count":"1","ani_duration":"0","screenstate_cid":"ss95CECA29D91479919745272","widget_cid":"w6312F193B11479919009159"},{"cid":"ss95CECA29D91479919745272w1DE2543FF11479919377883","screen_cid":null,"timestamp":20965390,"v":true,"name":"icon_button","left":100.0,"top":289.666666666667,"width":160.0,"height":132.0,"gid":null,"locked":false,"is":24,"icon":"caret-up","br":0,"bs":0,"z":5,"th":"","bg":"","bc":"","tc":"","o":100,"ds":0,"sc":"#222222","ro":0,"ls":0,"fixed":false,"fixed_type":1,"ani_name":"none","ani_delay":"0","ani_count":"1","ani_duration":"0","screenstate_cid":"ss95CECA29D91479919745272","widget_cid":"w1DE2543FF11479919377883"},{"cid":"ss95CECA29D91479919745272wFC2C4FB7751479919406629","screen_cid":null,"timestamp":20965397,"v":true,"name":"icon_button","left":70.0,"top":244.0,"width":220.0,"height":176.0,"gid":null,"locked":false,"is":24,"icon":"caret-up","br":0,"bs":0,"z":5,"th":"","bg":"","bc":"","tc":"","o":100,"ds":0,"sc":"#222222","ro":0,"ls":0,"fixed":false,"fixed_type":1,"ani_name":"bounce","ani_delay":"0","ani_count":"infinite","ani_duration":"2s","screenstate_cid":"ss95CECA29D91479919745272","widget_cid":"wFC2C4FB7751479919406629"},{"cid":"ss95CECA29D91479919745272wD5FF4FD7071479919477087","screen_cid":null,"timestamp":20965409,"v":true,"name":"text_view","left":135.0,"top":409.333333333333,"width":90.6666666666667,"height":30.6666666666667,"gid":null,"locked":false,"text":"<p>Press To Open</p>","fs":13,"br":0,"bs":0,"ha":"left","va":"top","z":5,"th":"dark","lh":18,"td":"normal","bo":0,"i":0,"bg":"","bc":"","tc":"#555","o":100,"ts":0,"tsc":"#aaaaaa","ds":0,"sc":"#222222","ro":0,"padding":0,"ls":0,"fixed":false,"fixed_type":1,"ani_name":"flash","ani_delay":"6s","ani_count":"1","ani_duration":"5s","clip":null,"screenstate_cid":"ss95CECA29D91479919745272","widget_cid":"wD5FF4FD7071479919477087"},{"cid":"ssDBCD8338661479919748842w67BB9FAA481479919377509","screen_cid":null,"timestamp":20965386,"v":true,"name":"icon_button","left":70.0,"top":310.0,"width":220.0,"height":140.0,"gid":null,"locked":false,"is":24,"icon":"caret-up","br":0,"bs":0,"z":5,"th":"","bg":"","bc":"","tc":"","o":100,"ds":0,"sc":"#222222","ro":0,"ls":0,"fixed":false,"fixed_type":1,"ani_name":"none","ani_delay":"0","ani_count":"1","ani_duration":"0","screenstate_cid":"ssDBCD8338661479919748842","widget_cid":"w67BB9FAA481479919377509"},{"cid":"ssDBCD8338661479919748842w512B3DC3AA1479919270397","screen_cid":null,"timestamp":20965365,"v":true,"name":"icon_button","left":60.0,"top":138.0,"width":220.0,"height":176.0,"gid":null,"locked":false,"is":24,"icon":"caret-up","br":0,"bs":0,"z":5,"th":"","bg":"","bc":"","tc":"","o":100,"ds":0,"sc":"#222222","ro":0,"ls":0,"fixed":false,"fixed_type":1,"ani_name":"none","ani_delay":"0","ani_count":"1","ani_duration":"0","screenstate_cid":"ssDBCD8338661479919748842","widget_cid":"w512B3DC3AA1479919270397"},{"cid":"ssDBCD8338661479919748842w6312F193B11479919009159","screen_cid":null,"timestamp":20965331,"v":true,"name":"icon_button","left":100.0,"top":165.0,"width":160.0,"height":135.0,"gid":null,"locked":false,"is":88,"icon":"car","br":0,"bs":0,"z":5,"th":"","bg":"","bc":"","tc":"","o":100,"ds":0,"sc":"#222222","ro":0,"ls":0,"fixed":false,"fixed_type":1,"ani_name":"none","ani_delay":"0","ani_count":"1","ani_duration":"0","screenstate_cid":"ssDBCD8338661479919748842","widget_cid":"w6312F193B11479919009159"},{"cid":"ssDBCD8338661479919748842w1DE2543FF11479919377883","screen_cid":null,"timestamp":20965390,"v":true,"name":"icon_button","left":100.0,"top":289.666666666667,"width":160.0,"height":132.0,"gid":null,"locked":false,"is":24,"icon":"caret-up","br":0,"bs":0,"z":5,"th":"","bg":"","bc":"","tc":"","o":100,"ds":0,"sc":"#222222","ro":0,"ls":0,"fixed":false,"fixed_type":1,"ani_name":"none","ani_delay":"0","ani_count":"1","ani_duration":"0","screenstate_cid":"ssDBCD8338661479919748842","widget_cid":"w1DE2543FF11479919377883"},{"cid":"ssDBCD8338661479919748842wFC2C4FB7751479919406629","screen_cid":null,"timestamp":20965397,"v":true,"name":"icon_button","left":70.0,"top":244.0,"width":220.0,"height":176.0,"gid":null,"locked":false,"is":24,"icon":"caret-up","br":0,"bs":0,"z":5,"th":"","bg":"","bc":"","tc":"","o":100,"ds":0,"sc":"#222222","ro":0,"ls":0,"fixed":false,"fixed_type":1,"ani_name":"bounce","ani_delay":"0","ani_count":"infinite","ani_duration":"2s","screenstate_cid":"ssDBCD8338661479919748842","widget_cid":"wFC2C4FB7751479919406629"},{"cid":"ssDBCD8338661479919748842wD5FF4FD7071479919477087","screen_cid":null,"timestamp":20965409,"v":true,"name":"text_view","left":135.0,"top":409.333333333333,"width":90.6666666666667,"height":30.6666666666667,"gid":null,"locked":false,"text":"<p>Press To Open</p>","fs":13,"br":0,"bs":0,"ha":"left","va":"top","z":5,"th":"dark","lh":18,"td":"normal","bo":0,"i":0,"bg":"","bc":"","tc":"#555","o":100,"ts":0,"tsc":"#aaaaaa","ds":0,"sc":"#222222","ro":0,"padding":0,"ls":0,"fixed":false,"fixed_type":1,"ani_name":"flash","ani_delay":"6s","ani_count":"1","ani_duration":"5s","clip":null,"screenstate_cid":"ssDBCD8338661479919748842","widget_cid":"wD5FF4FD7071479919477087"},{"cid":"ss1F5E3952C51479920868908w68CC1B44441479920382973","screen_cid":null,"timestamp":20965506,"v":true,"name":"icon_button","left":-4.0,"top":64.6666666666667,"width":184.0,"height":205.333333333333,"gid":null,"locked":false,"is":124,"icon":"user","br":0,"bs":0,"z":5,"th":"","bg":"","bc":"","tc":"","o":100,"ds":0,"sc":"#222222","ro":0,"ls":0,"fixed":false,"fixed_type":1,"ani_name":"none","ani_delay":"0","ani_count":"1","ani_duration":"0","screenstate_cid":"ss1F5E3952C51479920868908","widget_cid":"w68CC1B44441479920382973"},{"cid":"ss1F5E3952C51479920868908wE727E3ABD91479919986164","screen_cid":null,"timestamp":20965477,"v":true,"name":"icon_button","left":180.0,"top":67.6666666666667,"width":180.0,"height":204.0,"gid":null,"locked":false,"is":120,"icon":"truck","br":0,"bs":0,"z":5,"th":"","bg":"","bc":"","tc":"","o":100,"ds":0,"sc":"#222222","ro":0,"ls":0,"fixed":false,"fixed_type":1,"ani_name":"none","ani_delay":"0","ani_count":"1","ani_duration":"0","screenstate_cid":"ss1F5E3952C51479920868908","widget_cid":"wE727E3ABD91479919986164"},{"cid":"ss1F5E3952C51479920868908wB0A192FF471479919835566","screen_cid":null,"timestamp":20965456,"v":true,"name":"icon_button","left":-4.0,"top":344.333333333333,"width":184.0,"height":216.0,"gid":null,"locked":false,"is":120,"icon":"camera","br":0,"bs":0,"z":5,"th":"","bg":"","bc":"","tc":"","o":100,"ds":0,"sc":"#222222","ro":0,"ls":0,"fixed":false,"fixed_type":1,"ani_name":"none","ani_delay":"0","ani_count":"1","ani_duration":"0","screenstate_cid":"ss1F5E3952C51479920868908","widget_cid":"wB0A192FF471479919835566"},{"cid":"ss1F5E3952C51479920868908w6CD26B6B791479919902341","screen_cid":null,"timestamp":20965468,"v":true,"name":"icon_button","left":180.0,"top":346.0,"width":180.0,"height":190.0,"gid":null,"locked":false,"is":120,"icon":"calendar","br":0,"bs":0,"z":5,"th":"","bg":"","bc":"","tc":"","o":100,"ds":0,"sc":"#222222","ro":0,"ls":0,"fixed":false,"fixed_type":1,"ani_name":"none","ani_delay":"0","ani_count":"1","ani_duration":"0","screenstate_cid":"ss1F5E3952C51479920868908","widget_cid":"w6CD26B6B791479919902341"},{"cid":"ss1F5E3952C51479920868908w9F5846C0CD1479920248390","screen_cid":null,"timestamp":20965498,"v":true,"name":"icon_button","left":20.0,"top":23.0,"width":45.0,"height":45.0,"gid":null,"locked":false,"is":46,"icon":"home","br":0,"bs":0,"z":5,"th":"","bg":"","bc":"","tc":"","o":100,"ds":0,"sc":"#222222","ro":0,"ls":0,"fixed":false,"fixed_type":1,"ani_name":"none","ani_delay":"0","ani_count":"1","ani_duration":"0","screenstate_cid":"ss1F5E3952C51479920868908","widget_cid":"w9F5846C0CD1479920248390"},{"cid":"ss1F5E3952C51479920868908w29E0D284631479920211859","screen_cid":null,"timestamp":20965490,"v":true,"name":"icon_button","left":30.0,"top":585.0,"width":45.0,"height":45.0,"gid":null,"locked":false,"is":24,"icon":"chevron-circle-left","br":0,"bs":0,"z":5,"th":"","bg":"","bc":"","tc":"","o":100,"ds":0,"sc":"#222222","ro":0,"ls":0,"fixed":false,"fixed_type":1,"ani_name":"none","ani_delay":"0","ani_count":"1","ani_duration":"0","screenstate_cid":"ss1F5E3952C51479920868908","widget_cid":"w29E0D284631479920211859"},{"cid":"ss1F5E3952C51479920868908w36D9683EF41479951392386","screen_cid":null,"timestamp":20966107,"v":true,"name":"text_view","left":-10.6666666666667,"top":249.333333333333,"width":200.0,"height":59.0,"gid":null,"locked":false,"text":"If you can't explain it simply you don't understand it well enough.\n -- Albert Einstein","fs":13,"br":0,"bs":0,"ha":"left","va":"top","z":5,"th":"","lh":18,"td":"normal","bo":0,"i":0,"bg":"","bc":"","tc":"","o":100,"ts":0,"tsc":"#aaaaaa","ds":0,"sc":"#222222","ro":0,"padding":0,"ls":0,"fixed":false,"fixed_type":1,"ani_name":"none","ani_delay":"0","ani_count":"1","ani_duration":"0","clip":null,"screenstate_cid":"ss1F5E3952C51479920868908","widget_cid":"w36D9683EF41479951392386"},{"cid":"ss1F5E3952C51479920868908wFB0D3C7C7F1479951397844","screen_cid":null,"timestamp":20966115,"v":true,"name":"label","left":50.0,"top":260.0,"width":90.0,"height":45.3333333333333,"gid":null,"locked":false,"text":"<p>User</p>","fs":16,"br":0,"bs":0,"ha":"center","va":"middle","z":5,"th":"","lh":23,"td":"normal","bo":0,"i":0,"bg":"","bc":"","tc":"","o":100,"ts":0,"tsc":"#aaaaaa","ds":0,"sc":"#222222","ro":0,"padding":0,"ls":0,"fixed":false,"fixed_type":1,"ani_name":"none","ani_delay":"0","ani_count":"1","ani_duration":"0","screenstate_cid":"ss1F5E3952C51479920868908","widget_cid":"wFB0D3C7C7F1479951397844"},{"cid":"ss1F5E3952C51479920868908w89D83436051479951458705","screen_cid":null,"timestamp":20966129,"v":true,"name":"mtext_input","left":44.0,"top":234.0,"width":89.3333333333333,"height":36.0,"gid":null,"locked":false,"text":"User","fs":20,"br":8,"bs":1,"ha":"center","z":5,"th":"","bg":"transparent","bc":"transparent","tc":"","o":100,"ds":0,"sc":"#222222","td":"normal","bo":1,"i":0,"ls":0,"fixed":false,"fixed_type":1,"input_type":"text","screenstate_cid":"ss1F5E3952C51479920868908","widget_cid":"w89D83436051479951458705"},{"cid":"ss1F5E3952C51479920868908w9A94816F981479951499263","screen_cid":null,"timestamp":20966139,"v":true,"name":"mtext_input","left":230.0,"top":234.0,"width":89.3333333333333,"height":36.0,"gid":null,"locked":false,"text":"Vehicle","fs":20,"br":8,"bs":1,"ha":"center","z":5,"th":"","bg":"transparent","bc":"transparent","tc":"","o":100,"ds":0,"sc":"#222222","td":"normal","bo":1,"i":0,"ls":0,"fixed":false,"fixed_type":1,"input_type":"text","screenstate_cid":"ss1F5E3952C51479920868908","widget_cid":"w9A94816F981479951499263"},{"cid":"ss1F5E3952C51479920868908wC895F2EC261479951519303","screen_cid":null,"timestamp":20966146,"v":true,"name":"mtext_input","left":44.0,"top":524.666666666667,"width":96.0,"height":36.0,"gid":null,"locked":false,"text":"Camera ","fs":20,"br":8,"bs":1,"ha":"center","z":5,"th":"","bg":"transparent","bc":"transparent","tc":"","o":100,"ds":0,"sc":"#222222","td":"normal","bo":1,"i":0,"ls":0,"fixed":false,"fixed_type":1,"input_type":"text","screenstate_cid":"ss1F5E3952C51479920868908","widget_cid":"wC895F2EC261479951519303"},{"cid":"ss1F5E3952C51479920868908w60A69E97CB1479951569395","screen_cid":null,"timestamp":20966163,"v":true,"name":"mtext_input","left":220.333333333333,"top":524.666666666667,"width":109.333333333333,"height":35.3333333333333,"gid":null,"locked":false,"text":"Calender","fs":20,"br":8,"bs":1,"ha":"center","z":5,"th":"","bg":"transparent","bc":"transparent","tc":"","o":100,"ds":0,"sc":"#222222","td":"normal","bo":1,"i":0,"ls":0,"fixed":false,"fixed_type":1,"input_type":"text","screenstate_cid":"ss1F5E3952C51479920868908","widget_cid":"w60A69E97CB1479951569395"}],"panelstates":[],"devices":{"android":{"google_nexus":{"width":360,"height":640,"name":"Google Pixel"},"samsung":{"width":360,"height":640,"name":"Samsung"},"lg":{"width":360,"height":640,"name":"LG - V10/G4/G3/G Flex","hide":true},"moto":{"width":360,"height":640,"name":"Motorola - Moto X/G/E","hide":true},"htc_one":{"width":360,"height":640,"name":"HTC - One M8/M9/E9","hide":true},"sony_xperia":{"width":360,"height":640,"name":"Sony - Xperia Z3/Z5","hide":true},"Xiaomi":{"width":360,"height":640,"name":"XiaoMi"},"Huawei":{"width":360,"height":640,"name":"Huawei"},"Vivo/Oppo":{"width":360,"height":640,"name":"Oppo R7/Vivo X5","hide":true},"CoolPad":{"width":360,"height":640,"name":"CoolPad - Dazen X7/Note","hide":true},"Meizu":{"width":360,"height":600,"name":"Meizu"},"Smartisan":{"width":360,"height":640,"name":"Smartisan","hide":true},"google_nexus_4":{"width":384,"height":640,"name":"Google Nexus 4","hide":true},"customize":{"width":360,"height":640,"name":"Customize"}},"web":{"desktop":{"width":1440,"height":1024,"name":"Webpage"}},"ipad":{"iphone_4":{"width":320,"height":480,"scale":100,"icon_size":"120x120","name":"iPhone 4","hide":true},"iphone_5":{"width":320,"height":568,"scale":100,"icon_size":"120x120","name":"iPhone 5"},"iphone_6":{"width":375,"height":667,"scale":100,"icon_size":"180x180","name":"iPhone 6/7"},"iphone_6_plus":{"width":414,"height":736,"scale":100,"icon_size":"180x180","name":"iPhone 6/7 Plus"},"ipad_3_4":{"width":768,"height":1024,"scale":75,"icon_size":"152x152","name":"iPad"},"ipad_pro":{"width":1024,"height":1366,"scale":75,"icon_size":"152x152","name":"iPad Pro"}},"iphone":{"iphone_4":{"width":320,"height":480,"scale":100,"icon_size":"120x120","name":"iPhone 4","hide":true},"iphone_5":{"width":320,"height":568,"scale":100,"icon_size":"120x120","name":"iPhone 5"},"iphone_6":{"width":375,"height":667,"scale":100,"icon_size":"180x180","name":"iPhone 6/7"},"iphone_6_plus":{"width":414,"height":736,"scale":100,"icon_size":"180x180","name":"iPhone 6/7 Plus"},"ipad_3_4":{"width":768,"height":1024,"scale":75,"icon_size":"152x152","name":"iPad"},"ipad_pro":{"width":1024,"height":1366,"scale":75,"icon_size":"152x152","name":"iPad Pro"}},"default":{"iphone":"iphone_5","ipad":"ipad_3_4","android":"google_nexus"}},"collaborators":[],"threads":[],"comments":[],"teams":[]}</script>
